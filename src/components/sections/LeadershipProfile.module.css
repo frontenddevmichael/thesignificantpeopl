@@ -1,0 +1,96 @@
+.section {
+  padding: var(--space-10) var(--container-padding);
+  background: var(--color-bg-secondary);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.profileLarge,
+.profileSmall {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--spc-cream-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-on-light-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-light-primary);
+  line-height: 1.1;
+  margin-bottom: var(--space-1);
+  letter-spacing: -0.02em;
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+  font-weight: var(--fw-medium);
+}
+
+.bio {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  color: var(--color-text-on-light-secondary);
+  line-height: var(--lh-body);
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-sm);
+  font-style: italic;
+  font-weight: var(--fw-medium);
+  color: var(--color-accent);
+  line-height: 1.3;
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 767px) {
+  .profiles {
+    grid-template-columns: 1fr;
+    gap: var(--space-9);
+  }
+
+  .profileSmall {
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border-light);
+  }
+}

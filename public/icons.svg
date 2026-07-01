@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <rect x="2" y="2" width="36" height="36" stroke="#c9a13b" strokeWidth="1.5" fill="none" rx="0"/>
+  <text x="20" y="15" fontFamily="'Fraunces', Georgia, serif" fontSize="10" fill="#c9a13b" textAnchor="middle" fontWeight="600">SP</text>
+  <line x1="10" y1="20" x2="30" y2="20" stroke="#c9a13b" strokeWidth="0.5" opacity="0.5"/>
+  <text x="20" y="30" fontFamily="'JetBrains Mono', monospace" fontSize="4" fill="#ede6d3" textAnchor="middle" letterSpacing="1">EST. 2007</text>
+</svg>

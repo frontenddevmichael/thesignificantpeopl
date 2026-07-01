@@ -1,0 +1,33 @@
+const files = [
+  "PHOTO-2026-06-30-16-19-50.jpg",
+  "PHOTO-2026-06-30-16-19-51.jpg",
+  "PHOTO-2026-06-30-16-19-52.jpg",
+  "PHOTO-2026-06-30-16-19-53.jpg",
+  "PHOTO-2026-06-30-16-19-54.jpg",
+  "PHOTO-2026-06-30-16-19-50 2.jpg",
+  "PHOTO-2026-06-30-16-19-50 3.jpg",
+  "PHOTO-2026-06-30-16-19-50 4.jpg",
+  "PHOTO-2026-06-30-16-19-51 3.jpg",
+  "PHOTO-2026-06-30-16-19-51 4.jpg",
+  "PHOTO-2026-06-30-16-19-51 5.jpg",
+  "PHOTO-2026-06-30-16-19-52 2.jpg",
+  "PHOTO-2026-06-30-16-19-52 3.jpg",
+  "PHOTO-2026-06-30-16-19-52 4.jpg",
+  "PHOTO-2026-06-30-16-19-53 2.jpg",
+  "PHOTO-2026-06-30-16-19-53 3.jpg",
+  "PHOTO-2026-06-30-16-19-54 2.jpg",
+  "PHOTO-2026-06-30-16-19-54 3.jpg",
+  "PHOTO-2026-06-30-16-20-03.jpg",
+  "PHOTO-2026-06-30-16-20-03 5.jpg",
+  "PHOTO-2026-06-30-16-20-04.jpg",
+  "PHOTO-2026-06-30-16-20-04 2.jpg",
+  "PHOTO-2026-06-30-16-20-04 3.jpg",
+  "PHOTO-2026-06-30-16-20-04 4.jpg",
+  "WhatsApp Image 2026-06-30 at 16.19.50.jpeg",
+  "WhatsApp Image 2026-06-30 at 16.19.50 (1).jpeg",
+];
+
+export const galleryImages = files.map((f, i) => ({
+  src: `/Photos/${encodeURIComponent(f)}`,
+  alt: `Church photo ${i + 1}`,
+}));

@@ -1,0 +1,146 @@
+/* ==========================================================================
+   The Significant Peoples Church — Design Tokens
+   Direction: Regal / Editorial — deep navy ground, gold serif accents,
+   formal seal/crest motifs. Photo-light: typography and ornament carry
+   visual weight; photography is a later addition, not a dependency.
+   ========================================================================== */
+
+:root {
+  /* ---- Color: Core ---- */
+  --spc-navy-950: #0a0f1f;   /* deepest ground, footer, overlays */
+  --spc-navy-900: #0e1530;   /* primary background */
+  --spc-navy-800: #161f44;   /* card/section panels on navy */
+  --spc-navy-700: #232e5c;   /* borders, dividers on dark */
+  --spc-navy-600: #3a4778;   /* muted text on dark, disabled states */
+
+  --spc-gold-500: #c9a13b;   /* primary gold — CTAs, seals, hairlines */
+  --spc-gold-400: #d9b85e;   /* gold hover/active */
+  --spc-gold-300: #e8cd8a;   /* gold tint — large display text on navy */
+  --spc-gold-600: #a47f27;   /* gold pressed / shadow gold */
+
+  --spc-cream-100: #faf6ec;  /* primary light background */
+  --spc-cream-200: #f3ecd9;  /* secondary panel on light */
+  --spc-parchment: #ece2c6;  /* texture/border accents, light mode cards */
+
+  --spc-ink-900: #14171f;    /* primary body text on light */
+  --spc-ink-600: #4a4d59;    /* secondary text on light */
+  --spc-ink-300: #9a9ca6;    /* tertiary / placeholder text */
+
+  --spc-white: #ffffff;
+
+  /* ---- Color: Semantic ---- */
+  --color-bg-primary: var(--spc-navy-900);
+  --color-bg-secondary: var(--spc-cream-100);
+  --color-bg-panel-dark: var(--spc-navy-800);
+  --color-bg-panel-light: var(--spc-cream-200);
+
+  --color-text-on-dark-primary: var(--spc-cream-100);
+  --color-text-on-dark-secondary: rgba(237, 230, 211, 0.65);
+  --color-text-on-light-primary: var(--spc-ink-900);
+  --color-text-on-light-secondary: var(--spc-ink-600);
+
+  --color-accent: var(--spc-gold-500);
+  --color-accent-hover: var(--spc-gold-400);
+  --color-accent-pressed: var(--spc-gold-600);
+  --color-accent-tint: var(--spc-gold-300);
+
+  --color-border-dark: var(--spc-navy-700);
+  --color-border-light: var(--spc-parchment);
+  --color-border-gold: var(--spc-gold-500);
+
+  --color-success: #4f7d5c;
+  --color-error: #9b3a3a;
+
+  /* ---- Typography ---- */
+  /* Display: a refined serif for headings, scripture, the crest wordmark.
+     Candidates: "Cormorant Garamond", "Playfair Display", "Fraunces" */
+  --font-display: 'Fraunces', Georgia, serif;
+
+  /* Body: a clean, highly legible sans for readability at scale */
+  --font-body: 'Source Sans 3', 'Inter', -apple-system, sans-serif;
+
+  /* Accent/label: small caps or letterspaced sans for eyebrows, nav, labels */
+  --font-label: 'Source Sans 3', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+  --fs-display-xl: clamp(3.5rem, 7vw + 1rem, 6.5rem);   /* hero heading */
+  --fs-display-lg: clamp(2.75rem, 4.5vw + 1rem, 4.25rem); /* section heading */
+  --fs-display-md: clamp(2rem, 2.5vw + 1rem, 3rem);   /* subsection */
+  --fs-display-sm: 1.75rem;                                /* card titles */
+
+  --fs-body-lg: 1.35rem;
+  --fs-body-md: 1.15rem;
+  --fs-body-sm: 1rem;
+  --fs-label: 0.875rem;
+
+  --lh-display: 1.1;
+  --lh-body: 1.75;
+  --lh-label: 1.45;
+
+  --ls-label: 0.12em;      /* letterspacing for eyebrow/nav labels */
+  --ls-display: -0.01em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ---- Spacing scale (8px base) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+
+  /* ---- Radius ---- */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  /* ---- Border / Hairline ---- */
+  --border-hairline: 1px solid var(--color-border-gold);
+  --border-hairline-subtle: 1px solid var(--color-border-dark);
+  --border-width-seal: 2px;
+
+  /* ---- Shadow ---- */
+  --shadow-card: 0 8px 32px rgba(10, 15, 31, 0.08);
+  --shadow-card-dark: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --shadow-card-hover: 0 16px 48px rgba(10, 15, 31, 0.12);
+  --shadow-gold-glow: 0 0 0 1px var(--spc-gold-500), 0 8px 32px rgba(201, 161, 59, 0.15);
+
+  /* ---- Motion ---- */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+
+  /* ---- Z-index scale ---- */
+  --z-header: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+}
+
+/* ==========================================================================
+   Ornament tokens — the regal/editorial "kit" used in place of photography.
+   These get implemented as SVG components, not raw CSS, but are documented
+   here so build.md and components agree on naming.
+   ========================================================================== */
+
+/*
+  --ornament-crest         The church seal/crest mark (derived from logo)
+  --ornament-rule-gold     Thin gold horizontal rule with center diamond/dot
+  --ornament-laurel        Laurel-branch flourish for awards/anniversary stats
+  --ornament-corner-frame  Gold corner brackets framing leadership photos/quotes
+  --ornament-scripture-mark  Small gold quotation glyph for scripture callouts
+*/

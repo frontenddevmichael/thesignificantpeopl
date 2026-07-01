@@ -1,0 +1,10 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.content {
+  padding: var(--space-1);
+  display: flex;
+}

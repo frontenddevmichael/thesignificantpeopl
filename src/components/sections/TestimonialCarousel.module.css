@@ -1,0 +1,80 @@
+.section {
+  padding: var(--space-10) var(--container-padding);
+  background: var(--spc-cream-200);
+}
+
+.inner {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  min-height: 200px;
+}
+
+.slide {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.slideActive {
+  opacity: 1;
+  position: relative;
+  pointer-events: auto;
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-sm);
+  font-style: italic;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-on-light-primary);
+  line-height: 1.4;
+  max-width: 30ch;
+  margin: 0 auto;
+}
+
+.author {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: var(--space-4);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-default);
+  padding: 0;
+}
+
+.dotActive {
+  background: var(--color-accent);
+}
+
+.empty {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  color: var(--color-text-on-light-secondary);
+}
