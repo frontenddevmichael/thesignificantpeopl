@@ -1,0 +1,116 @@
+.page {
+  padding-top: 64px;
+}
+
+.hero {
+  background: var(--spc-navy-900);
+  border-bottom: 1px solid rgba(201, 161, 59, 0.08);
+  padding: var(--space-7) var(--container-padding) var(--space-5);
+}
+
+.heroInner {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+
+.heroEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: var(--fw-medium);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-dark-primary);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-top: var(--space-2);
+}
+
+/* ── Contact CTA ── */
+.contactSection {
+  padding: var(--space-10) var(--container-padding);
+  background: var(--spc-navy-950);
+  border-top: 1px solid rgba(201, 161, 59, 0.06);
+}
+
+.contactCtaInner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactCtaTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-dark-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.contactCtaText {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: rgba(237, 230, 211, 0.75);
+  line-height: 1.7;
+  margin-top: var(--space-3);
+}
+
+.contactCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--spc-navy-950);
+  background: var(--color-accent);
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  margin-top: var(--space-5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: var(--fw-medium);
+}
+
+.contactCtaBtn:hover {
+  background: #d9b142;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--space-5) var(--container-padding) var(--space-4);
+  }
+
+  .heroTitle {
+    font-size: var(--fs-display-lg);
+  }
+
+  .contactSection {
+    padding: var(--space-7) var(--container-padding);
+  }
+}
+
+@media (max-width: 599px) {
+  .hero {
+    padding: var(--space-4) var(--container-padding) var(--space-3);
+  }
+
+  .heroTitle {
+    font-size: var(--fs-display-md);
+  }
+
+  .contactCtaBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 28px;
+  }
+}

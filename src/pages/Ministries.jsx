@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import SectionHeading from '../components/ui/SectionHeading';
 import MinistryFloorPlan from '../components/sections/MinistryFloorPlan';
 import MinistryFilter from '../components/sections/MinistryFilter';
@@ -9,6 +9,8 @@ import { churchInfo } from '../data/churchInfo';
 import styles from './About.module.css';
 
 export default function MinistriesPage() {
+  const floorPlanRef = useRef(null);
+
   const allTags = useMemo(() => {
     const tags = new Set();
     ministries.forEach((m) => m.tags.forEach((t) => tags.add(t)));
@@ -22,11 +24,21 @@ export default function MinistriesPage() {
     return ministries.filter((m) => m.tags.includes(activeTag));
   }, [activeTag]);
 
+  useEffect(() => {
+    if (activeTag && floorPlanRef.current) {
+      floorPlanRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [activeTag]);
+
   return (
     <main className={styles.page}>
       <Helmet>
         <title>Ministries — {churchInfo.name}</title>
         <meta name="description" content={`Explore the ministries of ${churchInfo.name}: Youth, Children's Church, Worship, Drama, Prayer, Media, and more.`} />
+        <meta property="og:title" content={`Ministries — ${churchInfo.name}`} />
+        <meta property="og:description" content={`Explore the ministries of ${churchInfo.name}: Youth, Children's Church, Worship, Drama, Prayer, Media, and more.`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/ministries" />
       </Helmet>
 
       <section className={styles.hero}>
@@ -54,7 +66,7 @@ export default function MinistriesPage() {
         </div>
       </section>
 
-      <MinistryFloorPlan ministries={filtered} />
+      <MinistryFloorPlan ministries={filtered} activeTag={activeTag} ref={floorPlanRef} />
     </main>
   );
 }

@@ -151,6 +151,11 @@
   box-shadow: 0 0 12px rgba(201, 161, 59, 0.3);
 }
 
+@keyframes swipeFade {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.6; }
+}
+
 @media (max-width: 767px) {
   .slider {
     height: 55vh;
@@ -177,5 +182,43 @@
     width: 36px;
     height: 36px;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .slider {
+    height: 45vh;
+  }
+
+  .controls {
+    bottom: var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .navBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .captionTitle {
+    font-size: 1.25rem;
+  }
+
+  .slider::after {
+    content: '\2190 \00a0 Swipe \00a0 \2192';
+    position: absolute;
+    bottom: var(--space-14);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    animation: swipeFade 2s ease-in-out infinite;
+    z-index: 4;
+    pointer-events: none;
+    white-space: nowrap;
   }
 }

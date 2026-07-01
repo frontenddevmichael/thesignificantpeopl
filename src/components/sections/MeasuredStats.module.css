@@ -94,6 +94,12 @@
   opacity: 0.15;
 }
 
+/* ── Scroll hint for phone ── */
+@keyframes swipeHint {
+  0%, 100% { transform: translateX(0); opacity: 0.3; }
+  50% { transform: translateX(6px); opacity: 0.8; }
+}
+
 @media (max-width: 767px) {
   .section {
     padding: var(--space-7) var(--container-padding);
@@ -120,5 +126,64 @@
 
   .value {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .section {
+    padding: var(--space-5) 0 var(--space-5) var(--container-padding);
+    position: relative;
+  }
+
+  .eyebrow {
+    padding-right: var(--container-padding);
+    margin-bottom: var(--space-5);
+  }
+
+  .grid {
+    display: flex;
+    gap: var(--space-4);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-right: var(--container-padding);
+    scrollbar-width: none;
+    grid-template-columns: none;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    scroll-snap-align: start;
+    flex: 0 0 70vw;
+    min-width: 200px;
+    padding: var(--space-5) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .card:last-child {
+    position: relative;
+  }
+
+  .card:last-child::after {
+    content: '\2192';
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    opacity: 0.3;
+    animation: swipeHint 1.8s ease-in-out infinite;
+  }
+
+  .value {
+    font-size: 1.75rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
   }
 }

@@ -26,6 +26,7 @@ export const churchInfo = {
     currentMembers: '500+',
     houseFellowships: 17,
     branches: 5,
+    story: 'The ministry was initially known as The Youth of Significance International Ministries. As the vision expanded beyond the youth to reach people of all ages and backgrounds, the ministry was renamed The People of Significance Ministries International, reflecting its broader mandate and sphere of influence.\n\nThe Significant Peoples Church began on 4th March 2007 with a small but passionate congregation of seven members under the pastoral leadership of Pastors Wisdom and Ebun Adeyemo. Founded in response to God\'s vision to raise significant people, disciples of all Nations. The church held its first worship service at the Megalo Building, Uffa Quarters, Igarra, Edo State.\n\nOn 12th April 2008, the ministry was officially commissioned by Bishop Felix Remi Adejumo, at its worship centre beside Rockey Valley Hotel, Uttua Quarters, Igarra. As the church continued to grow, God provided a permanent home at the City of Peace, Off Farm Road, Igarra, Edo State, where the ministry is currently headquartered.\n\nFrom its humble beginning of seven members, the church has grown by God\'s grace to a thriving congregation of over 500 members, with seventeen house fellowship centres and five additional branches. Today, The Significant Peoples Church remains committed to its vision of raising significant people who stand out as disciples of Jesus Christ, impacting communities and the nations through the transforming power of the Gospel.',
   },
 
   services: [
@@ -48,6 +49,10 @@ export const churchInfo = {
     youtube: 'https://youtube.com/@wisdomadeyemo5591?si=GZI7wyo_Ba4ssxTM',
     tiktok: 'https://www.tiktok.com/@pstwisdomadeyemo?_r=1&_t=ZS-97cNMrwZkxg',
   },
+
+  /* Set this to a specific YouTube video ID when streaming live.
+     Leave empty to show the service schedule and channel link instead. */
+  liveStreamVideoId: '',
 
   bank: {
     accountName: 'The People of Significance Ministries Int\'l Inc.',

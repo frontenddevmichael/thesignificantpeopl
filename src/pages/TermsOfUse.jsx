@@ -8,6 +8,10 @@ export default function TermsOfUse() {
       <Helmet>
         <title>Terms of Use — {churchInfo.name}</title>
         <meta name="description" content={`Terms of Use for ${churchInfo.name}. Please read these terms carefully before using our website.`} />
+        <meta property="og:title" content={`Terms of Use — ${churchInfo.name}`} />
+        <meta property="og:description" content={`Terms of Use for ${churchInfo.name}. Please read these terms carefully before using our website.`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/terms-of-use" />
       </Helmet>
       <section className={styles.hero}>
         <div className={styles.heroInner}>

@@ -1,0 +1,402 @@
+.page {
+  background: var(--color-bg-secondary);
+}
+
+/* ── Hero ── */
+.hero {
+  background: var(--spc-navy-900);
+  padding: var(--space-10) var(--container-padding) var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(201, 161, 59, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.heroInner {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  position: relative;
+}
+
+.heroDecor {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 200px;
+  color: rgba(201, 161, 59, 0.05);
+  pointer-events: none;
+}
+
+.heroEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+  display: block;
+  font-weight: var(--fw-medium);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-dark-primary);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+}
+
+.heroSub {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: rgba(237, 230, 211, 0.7);
+  line-height: 1.7;
+  margin-top: var(--space-4);
+  max-width: 50ch;
+}
+
+/* ── Section common ── */
+.section {
+  padding: var(--space-10) var(--container-padding);
+}
+
+.sectionInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* ── Intro ── */
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Ornamental divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-7) 0 var(--space-2);
+  color: var(--color-accent);
+  opacity: 0.2;
+}
+
+.dividerLine {
+  width: 60px;
+  height: 1px;
+  background: var(--color-accent);
+  opacity: 0.4;
+}
+
+.dividerDiamond {
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  background: var(--color-accent);
+}
+
+/* ── Bank card ── */
+.bankSection {
+  background: var(--spc-cream-200);
+  padding: var(--space-10) var(--container-padding);
+}
+
+.bankCard {
+  max-width: 500px;
+  margin: var(--space-6) auto 0;
+  background: #ffffff;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-7);
+  position: relative;
+  overflow: hidden;
+}
+
+.bankCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), #e8c84a, var(--color-accent));
+}
+
+.bankCardDecor {
+  position: absolute;
+  bottom: var(--space-5);
+  right: var(--space-5);
+  width: 100px;
+  height: 100px;
+  color: rgba(201, 161, 59, 0.04);
+  pointer-events: none;
+}
+
+.bankBank {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.bankBankName {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-light-primary);
+}
+
+.bankAccountName {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-light-primary);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+.bankNumberWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.bankNumber {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: var(--fw-semibold);
+  color: var(--spc-gold-600);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  word-break: break-all;
+}
+
+.bankHint {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-on-light-secondary);
+  line-height: 1.6;
+  margin-top: var(--space-4);
+  font-style: italic;
+}
+
+/* ── Categories ── */
+.catGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.catCard {
+  border-top: 2px solid var(--color-border-light);
+  padding-top: var(--space-5);
+  transition: border-color 0.3s ease;
+  position: relative;
+}
+
+.catCard:hover {
+  border-top-color: var(--color-accent);
+}
+
+.catIcon {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-3);
+  line-height: 1;
+}
+
+.catTitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-on-light-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+  font-weight: var(--fw-semibold);
+}
+
+.catDesc {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-text-on-light-secondary);
+  line-height: 1.7;
+}
+
+/* ── Scripture ── */
+.scripture {
+  background: var(--spc-navy-900);
+  padding: var(--space-10) var(--container-padding);
+  position: relative;
+  overflow: hidden;
+}
+
+.scripture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(201, 161, 59, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.scriptureDecor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  color: rgba(201, 161, 59, 0.04);
+  pointer-events: none;
+}
+
+.scriptureInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.scriptureQuote {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-dark-primary);
+  max-width: 20ch;
+  margin: 0 auto;
+  line-height: 1.15;
+}
+
+.scriptureRef {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  margin-top: var(--space-3);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--space-7) var(--container-padding) var(--space-6);
+  }
+
+  .heroTitle {
+    font-size: var(--fs-display-lg);
+  }
+
+  .heroDecor {
+    display: none;
+  }
+
+  .bankNumber {
+    font-size: 1.5rem;
+  }
+
+  .catGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .scriptureQuote {
+    font-size: var(--fs-display-sm);
+  }
+
+  .scriptureDecor {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 599px) {
+  .catGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .catCard {
+    border-top: none;
+    border-left: 3px solid var(--color-border-light);
+    padding: 0 0 0 var(--space-4);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catCard:nth-child(1) { border-left-color: var(--color-accent); }
+  .catCard:nth-child(2) { border-left-color: #d9b85e; }
+  .catCard:nth-child(3) { border-left-color: var(--spc-navy-600); }
+  .catCard:nth-child(4) { border-left-color: #7a9a7a; }
+
+  .catCard:hover {
+    border-top-color: var(--color-border-light);
+    border-left-color: var(--color-accent);
+  }
+
+  .catIcon {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .catBar {
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--spc-cream-200);
+    margin-top: var(--space-3);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .catBarFill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .catCard:nth-child(1) .catBarFill { width: 100%; background: var(--color-accent); }
+  .catCard:nth-child(2) .catBarFill { width: 75%; background: #d9b85e; }
+  .catCard:nth-child(3) .catBarFill { width: 50%; background: var(--spc-navy-600); }
+  .catCard:nth-child(4) .catBarFill { width: 60%; background: #7a9a7a; }
+
+  .bankCard {
+    max-width: 100%;
+  }
+
+  .bankAccountName {
+    font-size: 1.25rem;
+  }
+
+  .bankNumber {
+    font-size: 1.35rem;
+  }
+
+  .scriptureQuote {
+    font-size: var(--fs-display-sm);
+    max-width: 100%;
+  }
+
+  .scriptureDecor {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catGrid {
+    gap: var(--space-3);
+  }
+}

@@ -31,7 +31,11 @@ export default function AboutIntro() {
                   alt="The Significant Peoples Church congregation"
                   className={styles.aboutImg}
                   loading="lazy"
+                  onError={(e) => { e.target.style.display = 'none'; e.target.nextElementSibling?.style.setProperty('display', 'flex'); }}
                 />
+                <div className={styles.imgFallback} aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none" width="32" height="32"><circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="1.5" opacity="0.4"/><path d="M16 32l6-8 5 6 4-4 5 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.4"/></svg>
+                </div>
               </div>
             </div>
           </ScrollReveal>

@@ -1,0 +1,39 @@
+.btn {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: var(--z-header);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--spc-navy-800);
+  color: var(--color-accent);
+  border: 1px solid rgba(201, 161, 59, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: fadeIn 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--color-accent);
+  color: var(--spc-navy-950);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 161, 59, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  .btn {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 40px;
+    height: 40px;
+  }
+}

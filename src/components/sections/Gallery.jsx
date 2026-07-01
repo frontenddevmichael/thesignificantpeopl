@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import SectionHeading from '../ui/SectionHeading';
 import styles from './Gallery.module.css';
+
+const prefersReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 export default function Gallery({ images = [] }) {
   const [active, setActive] = useState(0);
@@ -24,7 +25,7 @@ export default function Gallery({ images = [] }) {
   }, [len]);
 
   useEffect(() => {
-    if (len < 2) return;
+    if (len < 2 || prefersReduced) return;
     const timer = setInterval(() => {
       if (Date.now() - lastInteraction.current >= 4000) {
         setActive((prev) => (prev + 1) % len);
@@ -35,15 +36,13 @@ export default function Gallery({ images = [] }) {
 
   if (!len) return null;
 
-  const current = images[active];
-
   return (
     <section className={styles.section}>
       <div className={styles.slider}>
         {images.map((img, i) => (
           <div key={i} className={`${styles.slide} ${i === active ? styles.slideActive : ''}`}>
             {img.src ? (
-              <img src={img.src} alt={img.alt || 'Gallery image'} className={styles.image} loading={i === 0 ? 'eager' : 'lazy'} />
+              <img src={img.src} alt={img.alt || 'Gallery image'} className={styles.image} loading={i === 0 ? 'eager' : 'lazy'} onError={(e) => { e.target.style.display = 'none'; }} />
             ) : (
               <div className={styles.placeholder}>
                 <span>Gallery Image {i + 1}</span>

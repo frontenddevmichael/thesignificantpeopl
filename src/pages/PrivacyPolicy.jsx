@@ -8,6 +8,10 @@ export default function PrivacyPolicy() {
       <Helmet>
         <title>Privacy Policy — {churchInfo.name}</title>
         <meta name="description" content={`Privacy Policy for ${churchInfo.name}. Learn how we collect, use, and protect your personal information.`} />
+        <meta property="og:title" content={`Privacy Policy — ${churchInfo.name}`} />
+        <meta property="og:description" content={`Privacy Policy for ${churchInfo.name}. Learn how we collect, use, and protect your personal information.`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/privacy-policy" />
       </Helmet>
       <section className={styles.hero}>
         <div className={styles.heroInner}>

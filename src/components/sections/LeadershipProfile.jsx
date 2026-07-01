@@ -16,7 +16,7 @@ export default function LeadershipProfile({ profiles }) {
                   {primary.photo ? (
                     <img src={primary.photo} alt={primary.name} />
                   ) : (
-                    <span>Photo — {primary.name}</span>
+                    <div className={styles.initials}>{primary.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}</div>
                   )}
                 </div>
               </CropFrame>
@@ -35,7 +35,7 @@ export default function LeadershipProfile({ profiles }) {
                   {secondary.photo ? (
                     <img src={secondary.photo} alt={secondary.name} />
                   ) : (
-                    <span>Photo — {secondary.name}</span>
+                    <div className={styles.initials}>{secondary.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}</div>
                   )}
                 </div>
               </CropFrame>

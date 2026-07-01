@@ -1,41 +1,74 @@
 import SectionHeading from '../ui/SectionHeading';
+import { IconChurch, IconCalendar, IconClock } from '../ui/Icons';
+import { churchInfo } from '../../data/churchInfo';
 import styles from './LiveStream.module.css';
 
-export default function LiveStream({ youtubeUrl }) {
-  const videoId = youtubeUrl ? extractVideoId(youtubeUrl) : null;
+export default function LiveStream({ videoId, youtubeUrl }) {
+  const embedUrl = videoId
+    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`
+    : null;
 
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <SectionHeading eyebrow="Live" dark large>Watch &amp; Worship With Us</SectionHeading>
-        <div className={styles.embed}>
-          {videoId ? (
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-              title="Live Stream"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          ) : (
-            <div className={styles.offline}>
-              <div className={styles.offlineIcon}>&#x25B6;</div>
-              <div className={styles.offlineText}>No live stream at the moment.<br />Check back during service hours.</div>
+        {embedUrl ? (
+          <>
+            <SectionHeading eyebrow="Live" dark large>Watch &amp; Worship With Us</SectionHeading>
+            <div className={styles.embed}>
+              <iframe
+                src={embedUrl}
+                title="Live Stream"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
-          )}
-        </div>
+            <div className={styles.liveIndicator}>
+              <span className={styles.liveDot} />
+              <span>Live now</span>
+            </div>
+          </>
+        ) : (
+          <>
+            <SectionHeading eyebrow="Not Live Yet" dark large>Join Us In Person</SectionHeading>
+            <div className={styles.offlineLayout}>
+              <div className={styles.offlineCard}>
+                <div className={styles.offlineIconWrap}>
+                  <IconCalendar />
+                </div>
+                <h3 className={styles.offlineHeading}>Service Schedule</h3>
+                <div className={styles.scheduleList}>
+                  {churchInfo.services.map((s) => (
+                    <div key={s.day + s.time} className={styles.scheduleRow}>
+                      <span className={styles.scheduleDay}>{s.day}</span>
+                      <span className={styles.scheduleDot} />
+                      <span className={styles.scheduleTime}><IconClock /> {s.time}</span>
+                      <span className={styles.scheduleLabel}>{s.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className={styles.offlineCard}>
+                <div className={styles.offlineIconWrap}>
+                  <IconChurch />
+                </div>
+                <h3 className={styles.offlineHeading}>Watch Online Later</h3>
+                <p className={styles.offlineText}>
+                  Recordings of our services are available on our YouTube channel and Telegram.
+                </p>
+                <a
+                  href={youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.watchBtn}
+                >
+                  Visit YouTube Channel
+                </a>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
-}
-
-function extractVideoId(url) {
-  const patterns = [
-    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
-    /^([a-zA-Z0-9_-]{11})$/,
-  ];
-  for (const pattern of patterns) {
-    const match = url.match(pattern);
-    if (match) return match[1];
-  }
-  return null;
 }

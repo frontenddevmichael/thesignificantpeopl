@@ -12,6 +12,10 @@ export default function EventsPage() {
       <Helmet>
         <title>Events — {churchInfo.name}</title>
         <meta name="description" content={`Upcoming events at ${churchInfo.name}: The Eagles of Destiny Congress and Fire in the Word Conference.`} />
+        <meta property="og:title" content={`Events — ${churchInfo.name}`} />
+        <meta property="og:description" content={`Upcoming events at ${churchInfo.name}: The Eagles of Destiny Congress and Fire in the Word Conference.`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/events" />
       </Helmet>
 
       <section className={styles.hero}>

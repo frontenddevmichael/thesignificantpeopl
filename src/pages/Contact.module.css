@@ -1,0 +1,375 @@
+.page {
+  background: var(--color-bg-secondary);
+}
+
+/* ── Hero ── */
+.hero {
+  background: var(--spc-navy-900);
+  padding: var(--space-10) var(--container-padding) var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(201, 161, 59, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.heroInner {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  position: relative;
+}
+
+.heroDecor {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  color: rgba(201, 161, 59, 0.06);
+  pointer-events: none;
+}
+
+.heroEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+  display: block;
+  font-weight: var(--fw-medium);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-dark-primary);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  max-width: 12ch;
+}
+
+.heroSub {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: rgba(237, 230, 211, 0.7);
+  line-height: 1.7;
+  margin-top: var(--space-4);
+  max-width: 50ch;
+}
+
+/* ── Section common ── */
+.section {
+  padding: var(--space-10) var(--container-padding);
+}
+
+.sectionInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* ── Ornamental divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-7) 0 var(--space-2);
+  color: var(--color-accent);
+  opacity: 0.2;
+}
+
+.dividerLine {
+  width: 60px;
+  height: 1px;
+  background: var(--color-accent);
+  opacity: 0.4;
+}
+
+.dividerDiamond {
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  background: var(--color-accent);
+}
+
+/* ── Connect cards row ── */
+.connectGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.connectCard {
+  background: #ffffff;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.connectCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0.15;
+}
+
+.connectCardDecor {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  width: 80px;
+  height: 80px;
+  color: rgba(201, 161, 59, 0.04);
+  pointer-events: none;
+}
+
+.connectCardTitle {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-on-light-primary);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-4);
+}
+
+.connectRow {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+}
+
+.connectRow:last-child {
+  margin-bottom: 0;
+}
+
+.connectIcon {
+  color: var(--spc-gold-600);
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.connectLabel {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-text-on-light-secondary);
+  line-height: 1.7;
+}
+
+.connectLabel strong {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-on-light-primary);
+  font-weight: var(--fw-semibold);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.connectTime {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-on-light-primary);
+  margin-bottom: 6px;
+}
+
+.connectTime:last-child {
+  margin-bottom: 0;
+}
+
+.connectTime span {
+  color: var(--color-text-on-light-primary);
+  font-weight: var(--fw-semibold);
+}
+
+/* ── WhatsApp action ── */
+.whatsappRow {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #25d366;
+  padding: 14px 28px;
+  border: none;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: var(--fw-medium);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatsappBtn:hover {
+  background: #1ebe5d;
+  transform: translateY(-1px);
+}
+
+.whatsappBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Form section ── */
+.formSection {
+  background: var(--spc-cream-200);
+}
+
+.formWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.formCard {
+  background: #ffffff;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  position: relative;
+}
+
+.formCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0.15;
+}
+
+.formCardDecor {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  width: 60px;
+  height: 60px;
+  color: rgba(201, 161, 59, 0.03);
+  pointer-events: none;
+}
+
+.formCardTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-light-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.formCardDesc {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-text-on-light-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+}
+
+/* ── Decorative ring ── */
+.decoRing {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid var(--color-accent);
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.decoRing2 {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid var(--color-accent);
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--space-7) var(--container-padding) var(--space-6);
+  }
+
+  .heroTitle {
+    font-size: var(--fs-display-lg);
+  }
+
+  .heroDecor {
+    display: none;
+  }
+
+  .connectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formWrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .hero {
+    padding: var(--space-5) var(--container-padding) var(--space-4);
+  }
+
+  .heroTitle {
+    font-size: var(--fs-display-md);
+  }
+
+  .heroSub {
+    font-size: var(--fs-body-sm);
+  }
+
+  .connectCard {
+    padding: var(--space-5);
+  }
+
+  .whatsappBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 28px;
+  }
+
+  .formCard {
+    padding: var(--space-5);
+  }
+
+  .formCardTitle {
+    font-size: 1.25rem;
+  }
+}

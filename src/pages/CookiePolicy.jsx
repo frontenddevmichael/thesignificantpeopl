@@ -8,6 +8,10 @@ export default function CookiePolicy() {
       <Helmet>
         <title>Cookie Policy — {churchInfo.name}</title>
         <meta name="description" content={`Cookie Policy for ${churchInfo.name}. Learn how we use cookies on our website.`} />
+        <meta property="og:title" content={`Cookie Policy — ${churchInfo.name}`} />
+        <meta property="og:description" content={`Cookie Policy for ${churchInfo.name}. Learn how we use cookies on our website.`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/cookie-policy" />
       </Helmet>
       <section className={styles.hero}>
         <div className={styles.heroInner}>

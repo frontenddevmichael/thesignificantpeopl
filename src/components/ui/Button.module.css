@@ -54,3 +54,11 @@
   color: var(--spc-navy-950);
   transform: translateY(-2px);
 }
+
+.disabled,
+.disabled:hover {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

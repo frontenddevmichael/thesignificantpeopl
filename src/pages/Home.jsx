@@ -24,6 +24,12 @@ export default function Home() {
         <title>{churchInfo.seo.title}</title>
         <meta name="description" content={churchInfo.seo.description} />
         <meta name="keywords" content={churchInfo.seo.keywords} />
+        <meta property="og:title" content={churchInfo.seo.title} />
+        <meta property="og:description" content={churchInfo.seo.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/" />
+        <meta name="twitter:title" content={churchInfo.seo.title} />
+        <meta name="twitter:description" content={churchInfo.seo.description} />
       </Helmet>
       <Hero />
       <AboutIntro />
