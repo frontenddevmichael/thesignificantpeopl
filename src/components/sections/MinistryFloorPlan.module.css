@@ -1,7 +1,8 @@
 .section {
   padding: var(--space-10) var(--container-padding);
-  background: var(--spc-cream-100);
+  background: var(--spc-navy-900);
   position: relative;
+  overflow: hidden;
 }
 
 .section::before {
@@ -410,6 +411,8 @@
 @media (max-width: 599px) {
   .section {
     padding: var(--space-6) 0 var(--space-6) var(--container-padding);
+    overflow: hidden;
+    touch-action: pan-y;
   }
 
   .featured {

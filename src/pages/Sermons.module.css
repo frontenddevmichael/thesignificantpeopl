@@ -63,6 +63,7 @@
 .section {
   padding: var(--space-10) var(--container-padding);
   background: var(--spc-cream-100);
+  overflow: hidden;
   touch-action: pan-y;
 }
 

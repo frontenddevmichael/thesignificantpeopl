@@ -96,7 +96,7 @@ const MinistryFloorPlan = forwardRef(function MinistryFloorPlan({ ministries, ac
   return (
     <section className={styles.section} ref={ref}>
       <div className={styles.inner}>
-        <SectionHeading eyebrow="Our Departments" delay={0}>Find Your Place</SectionHeading>
+        <SectionHeading eyebrow="Our Departments" delay={0} dark>Find Your Place</SectionHeading>
 
         {/* Featured ministry — hero card */}
         <ScrollReveal delay={80}>
