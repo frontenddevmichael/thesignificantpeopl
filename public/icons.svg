@@ -1,6 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-  <rect x="2" y="2" width="36" height="36" stroke="#c9a13b" strokeWidth="1.5" fill="none" rx="0"/>
-  <text x="20" y="15" fontFamily="'Fraunces', Georgia, serif" fontSize="10" fill="#c9a13b" textAnchor="middle" fontWeight="600">SP</text>
-  <line x1="10" y1="20" x2="30" y2="20" stroke="#c9a13b" strokeWidth="0.5" opacity="0.5"/>
-  <text x="20" y="30" fontFamily="'JetBrains Mono', monospace" fontSize="4" fill="#ede6d3" textAnchor="middle" letterSpacing="1">EST. 2007</text>
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="goldBg" cx="42%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#e8c377"/>
+      <stop offset="30%" stop-color="#c99a4a"/>
+      <stop offset="60%" stop-color="#9a6f2e"/>
+      <stop offset="100%" stop-color="#5e3f1c"/>
+    </radialGradient>
+    <radialGradient id="goldBgSpots" cx="65%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#7a5222" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7a5222" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sealRing" cx="45%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#3a2c1a"/>
+      <stop offset="60%" stop-color="#241a0f"/>
+      <stop offset="100%" stop-color="#0d0906"/>
+    </radialGradient>
+    <linearGradient id="roofBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3f5fb0"/>
+      <stop offset="50%" stop-color="#2a4894"/>
+      <stop offset="100%" stop-color="#1f3676"/>
+    </linearGradient>
+    <linearGradient id="roofFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6a4fa0"/>
+      <stop offset="100%" stop-color="#3a2a68"/>
+    </linearGradient>
+    <linearGradient id="pillarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f0d9a0"/>
+      <stop offset="45%" stop-color="#d9b872"/>
+      <stop offset="100%" stop-color="#a9843f"/>
+    </linearGradient>
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8c988"/>
+      <stop offset="100%" stop-color="#8a6530"/>
+    </linearGradient>
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2d99a"/>
+      <stop offset="55%" stop-color="#d3a94f"/>
+      <stop offset="100%" stop-color="#8a6224"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <path d="M 200.0,10.0 L 216.86,28.83 L 237.07,13.65 L 249.93,35.41 L 272.71,24.46 L 281.08,48.31 L 305.56,42.02 L 309.12,67.04 L 334.35,65.65 L 332.96,90.88 L 357.98,94.44 L 351.69,118.92 L 375.54,127.29 L 364.59,150.07 L 386.35,162.93 L 371.17,183.14 L 390.0,200.0 L 371.17,216.86 L 386.35,237.07 L 364.59,249.93 L 375.54,272.71 L 351.69,281.08 L 357.98,305.56 L 332.96,309.12 L 334.35,334.35 L 309.12,332.96 L 305.56,357.98 L 281.08,351.69 L 272.71,375.54 L 249.93,364.59 L 237.07,386.35 L 216.86,371.17 L 200.0,390.0 L 183.14,371.17 L 162.93,386.35 L 150.07,364.59 L 127.29,375.54 L 118.92,351.69 L 94.44,357.98 L 90.88,332.96 L 65.65,334.35 L 67.04,309.12 L 42.02,305.56 L 48.31,281.08 L 24.46,272.71 L 35.41,249.93 L 13.65,237.07 L 28.83,216.86 L 10.0,200.0 L 28.83,183.14 L 13.65,162.93 L 35.41,150.07 L 24.46,127.29 L 48.31,118.92 L 42.02,94.44 L 67.04,90.88 L 65.65,65.65 L 90.88,67.04 L 94.44,42.02 L 118.92,48.31 L 127.29,24.46 L 150.07,35.41 L 162.93,13.65 L 183.14,28.83 Z"
+        fill="url(#sealRing)" stroke="#000000" stroke-width="1"/>
+
+  <circle cx="200" cy="200" r="152" fill="url(#goldBg)"/>
+  <circle cx="200" cy="200" r="152" fill="url(#goldBgSpots)"/>
+  <circle cx="200" cy="200" r="152" fill="none" stroke="#2a1c0d" stroke-width="4"/>
+
+  <g filter="url(#softShadow)">
+    <polygon points="200,128 118,182 282,182" fill="url(#roofBlue)"/>
+    <polygon points="200,128 178,182 222,182" fill="url(#roofFront)"/>
+    <polyline points="118,182 200,128 282,182" fill="none" stroke="#1a2c5c" stroke-width="2"/>
+    <rect x="112" y="180" width="176" height="8" fill="#16234a"/>
+
+    <g>
+      <rect x="128" y="188" width="14" height="70" fill="url(#pillarGrad)" stroke="#7a5722" stroke-width="0.8"/>
+      <rect x="164" y="188" width="14" height="70" fill="url(#pillarGrad)" stroke="#7a5722" stroke-width="0.8"/>
+      <rect x="222" y="188" width="14" height="70" fill="url(#pillarGrad)" stroke="#7a5722" stroke-width="0.8"/>
+      <rect x="258" y="188" width="14" height="70" fill="url(#pillarGrad)" stroke="#7a5722" stroke-width="0.8"/>
+    </g>
+
+    <rect x="118" y="258" width="164" height="12" fill="url(#baseGrad)" stroke="#5c421c" stroke-width="0.8"/>
+    <rect x="112" y="270" width="176" height="6" fill="#6b4c20"/>
+
+    <text x="200" y="230" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+          font-size="30" font-weight="700" letter-spacing="7" fill="#ffffff"
+          stroke="#3a2a10" stroke-width="0.5">POSMI</text>
+  </g>
+
+  <g>
+    <path d="M 120,282 Q 200,268 280,282 L 280,300 Q 200,290 120,300 Z"
+          fill="url(#ribbonGrad)" stroke="#5c421c" stroke-width="1"/>
+    <path d="M 108,278 L 120,282 L 120,300 L 108,296 Z" fill="#8a6224" stroke="#5c421c" stroke-width="0.8"/>
+    <path d="M 292,278 L 280,282 L 280,300 L 292,296 Z" fill="#8a6224" stroke="#5c421c" stroke-width="0.8"/>
+    <text x="200" y="296" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+          font-style="italic" font-size="15" fill="#2a1c0d">Grace House</text>
+  </g>
 </svg>

@@ -244,8 +244,8 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(201, 161, 59, 0.08);
-  color: var(--color-accent);
+  background: rgba(0, 136, 204, 0.1);
+  color: #0088CC;
   display: flex;
   align-items: center;
   justify-content: center;

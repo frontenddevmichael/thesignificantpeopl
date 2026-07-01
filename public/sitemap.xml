@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>/ministries</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>/sermons</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>/events</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>/give</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>/live</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>/terms-of-use</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>/cookie-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/ministries</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/sermons</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/events</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/give</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/live</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/terms-of-use</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/cookie-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

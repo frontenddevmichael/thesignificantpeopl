@@ -16,10 +16,12 @@ import CookiePolicy from './pages/CookiePolicy';
 import NotFound from './pages/NotFound';
 import CookieBanner from './components/ui/CookieBanner';
 import BackToTop from './components/ui/BackToTop';
+import ErrorBoundary from './components/ui/ErrorBoundary';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ErrorBoundary>
       <ScrollToTop />
       <Header />
       <Routes>
@@ -39,6 +41,7 @@ export default function App() {
       <Footer />
       <CookieBanner />
       <BackToTop />
+      </ErrorBoundary>
     </BrowserRouter>
   );
 }

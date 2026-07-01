@@ -77,21 +77,83 @@
 
 .social {
   display: flex;
-  gap: var(--space-4);
-  margin-top: var(--space-5);
+  gap: var(--space-5);
+  margin-top: var(--space-4);
 }
 
 .socialLink {
-  font-size: 1.35rem;
-  color: var(--color-text-on-dark-secondary);
-  transition: color var(--duration-fast) var(--ease-default), opacity var(--duration-fast) var(--ease-default);
+  font-size: 1.6rem;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.35s ease;
   line-height: 1;
+  display: inline-flex;
+  z-index: 0;
 }
 
-.socialLink:hover {
-  color: var(--color-accent);
-  opacity: 0.8;
+.socialLink::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: scale(0.6);
+  z-index: -1;
+  pointer-events: none;
 }
+
+.socialLink svg {
+  position: relative;
+  z-index: 1;
+}
+
+.socialLink[data-brand="facebook"] { color: #1877F2; }
+.socialLink[data-brand="facebook"]:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 20px rgba(24, 119, 242, 0.5));
+}
+.socialLink[data-brand="facebook"]:hover::after {
+  opacity: 1;
+  transform: scale(1);
+  background: rgba(24, 119, 242, 0.08);
+}
+
+.socialLink[data-brand="instagram"] { color: #E4405F; }
+.socialLink[data-brand="instagram"]:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 20px rgba(228, 64, 95, 0.5));
+}
+.socialLink[data-brand="instagram"]:hover::after {
+  opacity: 1;
+  transform: scale(1);
+  background: rgba(228, 64, 95, 0.08);
+}
+
+.socialLink[data-brand="youtube"] { color: #FF0000; }
+.socialLink[data-brand="youtube"]:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.5));
+}
+.socialLink[data-brand="youtube"]:hover::after {
+  opacity: 1;
+  transform: scale(1);
+  background: rgba(255, 0, 0, 0.08);
+}
+
+.socialLink[data-brand="tiktok"] { color: #FE2C55; }
+.socialLink[data-brand="tiktok"]:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 20px rgba(254, 44, 85, 0.5));
+}
+.socialLink[data-brand="tiktok"]:hover::after {
+  opacity: 1;
+  transform: scale(1);
+  background: rgba(254, 44, 85, 0.08);
+}
+
+
 
 .bottom {
   margin-top: var(--space-8);
