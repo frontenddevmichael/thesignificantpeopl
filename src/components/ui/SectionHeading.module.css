@@ -48,3 +48,15 @@
 .ruleRight {
   justify-content: flex-end;
 }
+
+@media (max-width: 767px) {
+  .heading {
+    max-width: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .heading {
+    font-size: var(--fs-display-md);
+  }
+}

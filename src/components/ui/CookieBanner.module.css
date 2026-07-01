@@ -61,3 +61,13 @@
     text-align: center;
   }
 }
+
+@media (max-width: 599px) {
+  .banner {
+    padding-bottom: calc(var(--space-4) + 72px);
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

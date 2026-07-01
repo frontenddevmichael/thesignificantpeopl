@@ -79,6 +79,8 @@
   font-size: var(--fs-body-lg);
   color: var(--color-text-on-light-primary);
   line-height: var(--lh-body);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .bodyText p {
@@ -304,6 +306,26 @@
   background: var(--color-accent);
 }
 
+@media (max-width: 1023px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+  }
+
+  .historyContent {
+    grid-template-columns: 1fr;
+  }
+
+  .photoRow {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
 @media (max-width: 767px) {
   .hero {
     padding: var(--space-7) var(--container-padding) var(--space-6);
@@ -317,26 +339,12 @@
     display: none;
   }
 
-  .twoCol {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-
-  .values {
-    grid-template-columns: 1fr;
+  .bodyText {
+    font-size: var(--fs-body);
   }
 
   .valueCard {
     padding: var(--space-5);
-  }
-
-  .historyContent {
-    grid-template-columns: 1fr;
-  }
-
-  .photoRow {
-    grid-template-columns: 1fr;
-    min-height: auto;
   }
 
   .photoContent {
