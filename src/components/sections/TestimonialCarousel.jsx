@@ -10,11 +10,25 @@ export default function TestimonialCarousel({ testimonials = [] }) {
     setActive((prev) => (prev + 1) % testimonials.length);
   }, [testimonials.length]);
 
+  const prev = useCallback(() => {
+    if (testimonials.length < 2) return;
+    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  }, [testimonials.length]);
+
   useEffect(() => {
     if (testimonials.length < 2) return;
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
   }, [next, testimonials.length]);
+
+  useEffect(() => {
+    function onKey(e) {
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft') prev();
+    }
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [next, prev]);
 
   if (!testimonials.length) {
     return (

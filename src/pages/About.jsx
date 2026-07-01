@@ -82,6 +82,7 @@ export default function About() {
           <div className={styles.twoCol}>
             <ScrollReveal>
               <SectionHeading eyebrow="Our Vision">{churchInfo.vision}</SectionHeading>
+              <p className={styles.scriptureRef}>{churchInfo.visionScriptures.join(' · ')}</p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <div className={styles.bodyText}>
@@ -98,7 +99,8 @@ export default function About() {
         <div className={styles.sectionInner}>
           <div className={styles.twoCol}>
             <ScrollReveal>
-              <SectionHeading eyebrow="Our Mission">{churchInfo.mission}</SectionHeading>
+              <SectionHeading eyebrow="Our Mandate">{churchInfo.mission}</SectionHeading>
+              <p className={styles.scriptureRef}>{churchInfo.mandateScripture}</p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <div className={styles.bodyText}>

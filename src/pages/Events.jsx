@@ -5,6 +5,7 @@ import ScrollReveal from '../components/ui/ScrollReveal';
 import { events } from '../data/events';
 import { churchInfo } from '../data/churchInfo';
 import styles from './About.module.css';
+import eStyles from './Events.module.css';
 
 export default function EventsPage() {
   return (
@@ -37,23 +38,20 @@ export default function EventsPage() {
       <section className={styles.section} style={{ background: 'var(--spc-cream-200)' }}>
         <div className={styles.sectionInner}>
           <SectionHeading eyebrow="Annual Gatherings">Our Events</SectionHeading>
-          <div style={{ display: 'grid', gap: 'var(--space-6)', marginTop: 'var(--space-6)' }}>
+          <div className={eStyles.grid}>
             {events.map((event, i) => (
               <ScrollReveal key={event.id} delay={i * 150}>
-                <div style={{ border: '1px solid var(--color-border-light)', padding: 'var(--space-6)', background: 'var(--color-bg-secondary)', position: 'relative', transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }}
-                  onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(10, 15, 31, 0.1)'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
-                >
-                  <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.55rem', color: 'var(--color-accent)', letterSpacing: '0.1em', textTransform: 'uppercase', position: 'absolute', top: 0, left: 'var(--space-4)', background: 'var(--color-bg-secondary)', padding: '0 var(--space-2)', transform: 'translateY(-50%)' }}>
+                <div className={eStyles.card}>
+                  <span className={eStyles.badge}>
                     Detail &mdash; {event.id}
                   </span>
-                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--fs-display-md)', fontWeight: 'var(--fw-semibold)', color: 'var(--color-text-on-light-primary)', marginBottom: 'var(--space-2)', letterSpacing: '-0.02em' }}>
+                  <h3 className={eStyles.title}>
                     {event.name}
                   </h3>
-                  <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-body-md)', color: 'var(--color-text-on-light-secondary)', lineHeight: '1.7', marginBottom: 'var(--space-3)' }}>
+                  <p className={eStyles.desc}>
                     {event.description}
                   </p>
-                  <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.7rem', color: 'var(--color-accent)', letterSpacing: '0.05em' }}>
+                  <div className={eStyles.meta}>
                     <span>{event.month} &middot; {event.duration}</span><br />
                     <span>{event.venue} &middot; {event.scripture}</span>
                   </div>

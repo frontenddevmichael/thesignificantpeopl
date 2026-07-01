@@ -92,7 +92,7 @@ export default function Gallery({ images = [] }) {
                   ref={(el) => { thumbRefs.current[i] = el; }}
                   className={`${styles.thumb} ${i === active ? styles.thumbActive : ''}`}
                   onClick={() => goTo(i)}
-                  aria-label={`Photo ${i + 1}`}
+                  aria-label={img.alt || `Photo ${i + 1}`}
                 >
                   <img src={img.src} alt="" className={styles.thumbImg} loading="lazy" onError={(e) => { e.target.style.display = 'none'; }} />
                 </button>

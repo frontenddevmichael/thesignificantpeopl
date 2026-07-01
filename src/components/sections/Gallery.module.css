@@ -52,59 +52,6 @@
   pointer-events: none;
 }
 
-.placeholder {
-  width: 100%;
-  height: 100%;
-  background: var(--spc-navy-800);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: var(--fs-body-sm);
-  color: var(--color-text-on-dark-secondary);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.caption {
-  position: absolute;
-  bottom: var(--space-8);
-  left: var(--container-padding);
-  right: var(--container-padding);
-  max-width: var(--container-max);
-  margin: 0 auto;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.captionLine {
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: var(--color-accent);
-  margin-bottom: var(--space-3);
-  opacity: 0.6;
-}
-
-.captionLabel {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  color: var(--color-accent);
-  text-transform: uppercase;
-  margin-bottom: var(--space-2);
-  display: block;
-}
-
-.captionTitle {
-  font-family: var(--font-display);
-  font-size: var(--fs-display-md);
-  font-weight: var(--fw-semibold);
-  color: var(--color-text-on-dark-primary);
-  line-height: 1.1;
-  max-width: 15ch;
-}
-
 .stripWrap {
   position: absolute;
   bottom: 4.5rem;
@@ -120,6 +67,7 @@
   display: flex;
   gap: 6px;
   overflow-x: auto;
+  overflow-y: hidden;
   touch-action: pan-x;
   overscroll-behavior-x: contain;
   padding: 0 var(--container-padding);
@@ -160,18 +108,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.thumbPlaceholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  color: var(--color-text-on-dark-secondary);
-  background: var(--spc-navy-800);
 }
 
 .controls {
@@ -228,17 +164,9 @@
     height: 55vh;
   }
 
-  .captionTitle {
-    font-size: var(--fs-display-sm);
-  }
-
   .controls {
     bottom: var(--space-4);
     right: var(--container-padding);
-  }
-
-  .caption {
-    bottom: var(--space-4);
   }
 
   .stripWrap {
@@ -297,10 +225,6 @@
     width: 32px;
     height: 32px;
     font-size: 0.85rem;
-  }
-
-  .captionTitle {
-    font-size: 1.25rem;
   }
 
   .slider::after {

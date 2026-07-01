@@ -145,6 +145,7 @@
     display: flex;
     gap: var(--space-4);
     overflow-x: auto;
+    overflow-y: hidden;
     touch-action: pan-x;
     scroll-snap-type: x proximity;
     overscroll-behavior-x: contain;
@@ -162,6 +163,7 @@
     scroll-snap-align: start;
     flex: 0 0 70vw;
     min-width: 200px;
+    min-height: 160px;
     padding: var(--space-5) var(--space-4);
     gap: var(--space-3);
   }

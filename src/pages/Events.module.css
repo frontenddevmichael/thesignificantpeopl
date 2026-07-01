@@ -1,0 +1,56 @@
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.card {
+  border: 1px solid var(--color-border-light);
+  padding: var(--space-6);
+  background: var(--color-bg-secondary);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(10, 15, 31, 0.1);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: var(--space-4);
+  background: var(--color-bg-secondary);
+  padding: 0 var(--space-2);
+  transform: translateY(-50%);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-display-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-on-light-primary);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.02em;
+}
+
+.desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  color: var(--color-text-on-light-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}

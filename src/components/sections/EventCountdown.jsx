@@ -10,10 +10,10 @@ function getNextEvent() {
   const now = new Date();
   const currentYear = now.getFullYear();
   for (const event of EVENT_DATES) {
-    const date = new Date(currentYear, event.month, event.day);
+    const date = new Date(currentYear, event.month - 1, event.day);
     if (date > now) return { ...event, date };
   }
-  const date = new Date(currentYear + 1, EVENT_DATES[0].month, EVENT_DATES[0].day);
+  const date = new Date(currentYear + 1, EVENT_DATES[0].month - 1, EVENT_DATES[0].day);
   return { ...EVENT_DATES[0], date };
 }
 

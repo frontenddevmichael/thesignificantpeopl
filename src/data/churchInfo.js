@@ -1,10 +1,12 @@
 export const churchInfo = {
   name: 'The Significant Peoples Church',
-  slogan: 'Significant People... Product of Grace',
+  slogan: 'A significant people product of grace',
   shortDescription: 'The Significant Peoples Church is a welcoming, Christ-centered family where people are empowered to discover, develop, and maximize their God-given potential in Christ. We are passionate about raising significant people who live as true disciples of Jesus Christ and positively influence their communities and the nations. Through heartfelt worship, biblical teaching, prayer, discipleship, and genuine fellowship, we help people grow in faith and purpose. Guided by our values of loyalty to God, excellence, accountability, discipline, and dedication, we welcome everyone to experience God\'s love, grow spiritually, and become all He has called them to be.',
 
   vision: 'To raise significant people who stand out as disciples of Jesus Christ affecting the nations of the earth positively.',
   mission: 'To empower you to discover, develop, release and maximize your potentials in Christ, affecting the nations of the earth supernaturally.',
+  visionScriptures: ['Isaiah 2:2-5', 'Micah 4:1-5'],
+  mandateScripture: 'Matthew 28:18-20',
 
   coreValues: [
     { title: 'Loyalty to God', description: 'Our highest allegiance is to God and His Word. We remain faithful and committed to Him above all else.' },
@@ -25,8 +27,8 @@ export const churchInfo = {
     initialMembers: 7,
     currentMembers: '500+',
     houseFellowships: 17,
-    branches: 5,
-    story: 'The ministry was initially known as The Youth of Significance International Ministries. As the vision expanded beyond the youth to reach people of all ages and backgrounds, the ministry was renamed The People of Significance Ministries International, reflecting its broader mandate and sphere of influence.\n\nThe Significant Peoples Church began on 4th March 2007 with a small but passionate congregation of seven members under the pastoral leadership of Pastors Wisdom and Ebun Adeyemo. Founded in response to God\'s vision to raise significant people, disciples of all Nations. The church held its first worship service at the Megalo Building, Uffa Quarters, Igarra, Edo State.\n\nOn 12th April 2008, the ministry was officially commissioned by Bishop Felix Remi Adejumo, at its worship centre beside Rockey Valley Hotel, Uttua Quarters, Igarra. As the church continued to grow, God provided a permanent home at the City of Peace, Off Farm Road, Igarra, Edo State, where the ministry is currently headquartered.\n\nFrom its humble beginning of seven members, the church has grown by God\'s grace to a thriving congregation of over 500 members, with seventeen house fellowship centres and five additional branches. Today, The Significant Peoples Church remains committed to its vision of raising significant people who stand out as disciples of Jesus Christ, impacting communities and the nations through the transforming power of the Gospel.',
+    branches: 6,
+    story: 'The ministry was initially known as The Youth of Significance International Ministries. As the vision expanded beyond the youth to reach people of all ages and backgrounds, the ministry was renamed The People of Significance Ministries International, reflecting its broader mandate and sphere of influence.\n\nThe Significant Peoples Church began on 4th March 2007 with a small but passionate congregation of seven members under the pastoral leadership of Pastors Wisdom and Ebun Adeyemo. Founded in response to God\'s vision to raise significant people, disciples of all Nations. The church held its first worship service at the Megalo Building, Uffa Quarters, Igarra, Edo State.\n\nOn 12th April 2008, the ministry was officially commissioned by Bishop Felix Remi Adejumo, at its worship centre beside Rockey Valley Hotel, Uttua Quarters, Igarra. As the church continued to grow, God provided a permanent home at the City of Peace, Off Farm Road, Igarra, Edo State, where the ministry is currently headquartered.\n\nFrom its humble beginning of seven members, the church has grown by God\'s grace to a thriving congregation of over 500 members, with seventeen house fellowship centres and six additional branches. Today, The Significant Peoples Church remains committed to its vision of raising significant people who stand out as disciples of Jesus Christ, impacting communities and the nations through the transforming power of the Gospel.',
   },
 
   services: [

@@ -4,7 +4,7 @@ import styles from './NotFound.module.css';
 
 export default function NotFound() {
   return (
-    <section className={styles.section}>
+    <main className={styles.section}>
       <Helmet>
         <title>404 — Page Not Found | The Significant Peoples Church</title>
         <meta name="description" content="The page you are looking for does not exist or has been moved. Let us help you find your way." />
@@ -24,6 +24,6 @@ export default function NotFound() {
           <Button to="/contact">Contact Us</Button>
         </div>
       </div>
-    </section>
+    </main>
   );
 }
