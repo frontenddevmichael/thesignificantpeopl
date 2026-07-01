@@ -104,10 +104,10 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <div className={styles.bodyText}>
-                <p>We are committed to:</p>
-                <p><strong>Teaching</strong> that grounds believers in their identity in Christ.<br />
-                <strong>Training</strong> that equips every member for ministry.<br />
-                <strong>Sending</strong> that launches labourers into the harvest field.</p>
+                <p>Here's what we're about:</p>
+                <p><strong>Teaching</strong> — helping you know who you are in Christ.<br />
+                <strong>Training</strong> — equipping you for the work God's called you to.<br />
+                <strong>Sending</strong> — releasing you into the harvest field.</p>
               </div>
             </ScrollReveal>
           </div>

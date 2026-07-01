@@ -56,7 +56,7 @@ export default function MinistriesPage() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <div className={styles.bodyText}>
-                <p>At {churchInfo.name}, we believe every believer is called to serve. Our ministries are designed to help you discover your gifts, grow in your faith, and make a difference. Find a ministry that aligns with your passion and purpose.</p>
+                <p>God didn't make you to sit on the sidelines. Whether you're into music, teaching, prayer, media, or working with youth — there's a place for you here. Come find where you fit and start making a difference.</p>
               </div>
             </ScrollReveal>
           </div>

@@ -1,18 +1,18 @@
 export const churchInfo = {
   name: 'The Significant Peoples Church',
-  slogan: 'A significant people product of grace',
-  shortDescription: 'The Significant Peoples Church is a welcoming, Christ-centered family where people are empowered to discover, develop, and maximize their God-given potential in Christ. We are passionate about raising significant people who live as true disciples of Jesus Christ and positively influence their communities and the nations. Through heartfelt worship, biblical teaching, prayer, discipleship, and genuine fellowship, we help people grow in faith and purpose. Guided by our values of loyalty to God, excellence, accountability, discipline, and dedication, we welcome everyone to experience God\'s love, grow spiritually, and become all He has called them to be.',
+  slogan: 'Raising significant people, disciples of all nations',
+  shortDescription: 'We\'re a family of faith on a mission — raising people who live for Jesus and make a difference. At The Significant Peoples Church, you\'ll find real worship, solid teaching, and a community that\'s serious about growing together. Whether you\'re just starting your faith journey or you\'ve walked with God for years, there\'s a place for you here. We don\'t just fill pews — we build disciples who carry the Gospel to their world.',
 
-  vision: 'To raise significant people who stand out as disciples of Jesus Christ affecting the nations of the earth positively.',
-  mission: 'To empower you to discover, develop, release and maximize your potentials in Christ, affecting the nations of the earth supernaturally.',
+  vision: 'To raise significant people — disciples of all nations who carry the light of Jesus and make an impact wherever they go.',
+  mission: 'To help you discover who God made you to be, grow in your gifts, and step into your purpose — reaching your world for Christ.',
   visionScriptures: ['Isaiah 2:2-5', 'Micah 4:1-5'],
   mandateScripture: 'Matthew 28:18-20',
 
   coreValues: [
-    { title: 'Loyalty to God', description: 'Our highest allegiance is to God and His Word. We remain faithful and committed to Him above all else.' },
-    { title: 'Excellence', description: 'We pursue excellence in our life and walk with God, giving our best in all we do as unto the Lord.' },
-    { title: 'Accountability', description: 'We are accountable to one another, walking in transparency, honesty, and mutual responsibility.' },
-    { title: 'Discipline and Dedication', description: 'We embrace discipline and dedication as foundations for spiritual growth and kingdom impact.' },
+    { title: 'Loyalty to God', description: 'God first, always. Our hearts belong to Him, and everything else flows from that.' },
+    { title: 'Excellence', description: 'We give God our best — not because we have to, but because He deserves it.' },
+    { title: 'Accountability', description: 'We walk this journey together. Honest, open, real — no masks, no pretense.' },
+    { title: 'Discipline and Dedication', description: 'Growing takes work. We stay the course, day after day, because the prize is worth it.' },
   ],
 
   history: {
@@ -28,7 +28,7 @@ export const churchInfo = {
     currentMembers: '500+',
     houseFellowships: 17,
     branches: 6,
-    story: 'The ministry was initially known as The Youth of Significance International Ministries. As the vision expanded beyond the youth to reach people of all ages and backgrounds, the ministry was renamed The People of Significance Ministries International, reflecting its broader mandate and sphere of influence.\n\nThe Significant Peoples Church began on 4th March 2007 with a small but passionate congregation of seven members under the pastoral leadership of Pastors Wisdom and Ebun Adeyemo. Founded in response to God\'s vision to raise significant people, disciples of all Nations. The church held its first worship service at the Megalo Building, Uffa Quarters, Igarra, Edo State.\n\nOn 12th April 2008, the ministry was officially commissioned by Bishop Felix Remi Adejumo, at its worship centre beside Rockey Valley Hotel, Uttua Quarters, Igarra. As the church continued to grow, God provided a permanent home at the City of Peace, Off Farm Road, Igarra, Edo State, where the ministry is currently headquartered.\n\nFrom its humble beginning of seven members, the church has grown by God\'s grace to a thriving congregation of over 500 members, with seventeen house fellowship centres and six additional branches. Today, The Significant Peoples Church remains committed to its vision of raising significant people who stand out as disciples of Jesus Christ, impacting communities and the nations through the transforming power of the Gospel.',
+    story: 'It all started with a youth ministry — The Youth of Significance International Ministries. But God had bigger plans. As the vision grew, so did the name: The People of Significance Ministries International, a church for everyone, not just the young.\n\nThe Significant Peoples Church held its first service on 4th March 2007. Just seven people showed up — seven. They met at the Megalo Building, Uffa Quarters, Igarra, under the leadership of Pastors Wisdom and Ebun Adeyemo. A small start, but the fire was real.\n\nOn 12th April 2008, the ministry was officially commissioned by Bishop Felix Remi Adejumo at their worship centre beside Rockey Valley Hotel, Uttua Quarters, Igarra. God kept adding, kept growing. Before long, He gave them a permanent home — the City of Peace, Off Farm Road, Igarra, where we\'re still based today.\n\nFrom seven to over 500. From one location to seventeen house fellowships and six branches. God did it. And we\'re still just getting started — raising disciples, sending them out, impacting nations with the Gospel.',
   },
 
   services: [
@@ -65,17 +65,17 @@ export const churchInfo = {
 
   seo: {
     title: 'The Significant Peoples Church | Raising Significant People',
-    description: 'The Significant Peoples Church is a Christ-centered ministry in Igarra, Edo State, dedicated to raising significant people and disciples of Jesus Christ who impact nations through purpose, faith, and the Word of God. Join us for worship, growth, and fellowship.',
+    description: 'We\'re a church family in Igarra, Edo State, raising disciples of Jesus who carry His light to the nations. Join us for worship, grow in faith, and find your place in God\'s story.',
     keywords: 'The Significant Peoples Church, church in Igarra, Edo State church, Christian church in Nigeria, discipleship church, youth church Nigeria, worship service Igarra, Sunday service Edo State, Bible believing church, Nigerian churches, Christian fellowship Nigeria, house fellowship centers',
-    targetAudience: 'Individuals, families, youths, and children seeking a Christ-centered church experience; believers growing in faith; new converts; and people looking for spiritual growth, discipleship, worship, and community in Igarra, Edo State and surrounding areas.',
+    targetAudience: 'Anyone looking for a real church home — whether you\'re young or old, new to faith or have been walking with God for years. If you want to grow, serve, and make a difference, you belong here.',
     location: 'Nigeria',
   },
 
   homepage: {
-    welcomeMessage: 'Welcome to The Significant Peoples Church, a place where you are loved, valued, and equipped to grow in Christ and live a life of significance.',
+    welcomeMessage: 'Welcome home. At The Significant Peoples Church, you\'re not just a face in the crowd — you\'re family. Come as you are, grow where you\'re planted, and discover what God has for you.',
     heroHeading: 'Raising Significant People',
-    heroSubheading: 'Disciples of Jesus Christ impacting the nations through purpose, power, and the Word of God.',
-    ctaText: 'Join Us This Sunday | Come and Experience God',
+    heroSubheading: 'Disciples of all nations, raised for His glory.',
+    ctaText: 'Join Us This Sunday | You Belong Here',
     featuredAnnouncement: 'Sunday Services: 7:00am – 9:00am | 9:00am – 11:00am\nMidweek Communion Service: Wednesdays 5:00pm\nLocation: City of Peace, Off Farm Road, Igarra, Edo State',
   },
 
@@ -83,27 +83,27 @@ export const churchInfo = {
     {
       id: 'wear',
       question: 'What should I wear?',
-      answer: 'Come as you are. There\'s no strict dress code. We only encourage modest, neat, and comfortable clothing, and you\'ll be warmly welcomed no matter what you wear.',
+      answer: 'Come as you are. Seriously. There\'s no dress code here — just come ready to meet with God. You\'ll see everything from suits to casual, and nobody minds either way.',
     },
     {
       id: 'parking',
       question: 'Where do I park?',
-      answer: 'The church has its own parking area available for all members and visitors.',
+      answer: 'We\'ve got parking on-site. Plenty of space for everyone.',
     },
     {
       id: 'children',
       question: 'Is there a children\'s church?',
-      answer: 'Yes, we have a vibrant Teenagers\' and Children\'s Ministry that meets every other Sunday (aside from the first Sunday of the month) at 9:00 AM.',
+      answer: 'Yes! Our Teens and Children\'s Ministry runs every other Sunday (except the first Sunday of the month) at 9:00 AM. Your kids will love it.',
     },
     {
       id: 'first-time',
       question: 'Can first-time visitors attend?',
-      answer: 'Absolutely! First-time visitors are always welcome. You\'ll be greeted warmly and guided through everything you need to know.',
+      answer: 'Absolutely. In fact, we\'d love to have you. Don\'t worry about standing out — you\'ll be welcomed like family from the moment you walk in.',
     },
     {
       id: 'membership',
       question: 'How do I become a member?',
-      answer: 'Attend any of our services and indicate your interest in membership to one of our ministers or ushers. We\'ll guide you through the next steps.',
+      answer: 'Simple — just let one of our ministers or ushers know you\'re interested after any service. We\'ll walk you through everything from there.',
     },
   ],
 };

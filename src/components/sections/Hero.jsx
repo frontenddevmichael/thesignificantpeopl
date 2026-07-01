@@ -1,3 +1,4 @@
+import { churchInfo } from '../../data/churchInfo';
 import Button from '../ui/Button';
 import styles from './Hero.module.css';
 
@@ -13,7 +14,7 @@ export default function Hero() {
             People
           </h1>
           <p className={styles.subhead}>
-            Disciples of Jesus Christ impacting the nations through purpose, power, and the Word of God.
+            {churchInfo.homepage.heroSubheading}
           </p>
           <div className={styles.ctas}>
             <Button to="/about">Learn Our Story</Button>

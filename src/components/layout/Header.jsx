@@ -18,7 +18,7 @@ export default function Header() {
           </div>
           <div className={styles.wordmark}>
             <span className={styles.wordmarkMain}>Significant Peoples</span>
-            <span className={styles.wordmarkSub}>Product of Grace</span>
+            <span className={styles.wordmarkSub}>Disciples of All Nations</span>
           </div>
         </Link>
         <button

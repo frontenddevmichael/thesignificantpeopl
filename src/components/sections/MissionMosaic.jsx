@@ -81,9 +81,9 @@ export default function MissionMosaic() {
                 <div className={styles.panelBorder}>
                   <span className={styles.panelLabel}>Our Mission</span>
                   <h2 className={styles.wordmark}>
-                    Empower<br />
-                    <span className={styles.wordAccent}>Release</span><br />
-                    Maximize
+                    Raise<br />
+                    <span className={styles.wordAccent}>Send</span><br />
+                    Impact
                   </h2>
                   <div className={styles.rule} />
                   <p className={styles.text}>{churchInfo.mission}</p>
