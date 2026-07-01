@@ -365,9 +365,11 @@
 }
 
 @media (max-width: 767px) {
-  .section {
-    padding: var(--space-7) var(--container-padding);
-  }
+.section {
+  padding: var(--space-10) var(--container-padding);
+  background: var(--color-bg-primary);
+  touch-action: pan-y;
+}
 
   .featured {
     padding: var(--space-5);
@@ -419,7 +421,9 @@
     display: flex;
     gap: var(--space-4);
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    touch-action: pan-x;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
     padding-right: var(--container-padding);
     scrollbar-width: none;

@@ -2,6 +2,7 @@
   padding: var(--space-6) 0;
   background: var(--spc-navy-950);
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .slider {
@@ -119,6 +120,8 @@
   display: flex;
   gap: 6px;
   overflow-x: auto;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
   padding: 0 var(--container-padding);
   pointer-events: auto;
   max-width: var(--container-max);
@@ -281,6 +284,10 @@
     height: 45vh;
   }
 
+  .dots {
+    bottom: 8px;
+  }
+
   .controls {
     bottom: var(--space-3);
     gap: var(--space-2);
@@ -299,7 +306,7 @@
   .slider::after {
     content: '\2190 \00a0 Swipe \00a0 \2192';
     position: absolute;
-    bottom: var(--space-11);
+    bottom: 44px;
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font-mono);

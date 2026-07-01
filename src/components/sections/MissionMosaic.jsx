@@ -62,7 +62,7 @@ export default function MissionMosaic() {
                 <div className={styles.panelBorder}>
                   <span className={styles.panelLabel}>Our Vision</span>
                   <h2 className={styles.wordmark}>
-                    Raise<br />
+                    Raising<br />
                     <span className={styles.wordAccent}>Significant</span><br />
                     People
                   </h2>

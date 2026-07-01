@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+body {
+  overscroll-behavior-x: none;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;

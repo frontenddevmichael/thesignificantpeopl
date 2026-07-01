@@ -149,19 +149,18 @@
   min-height: 300px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .section {
     padding: var(--space-7) var(--container-padding);
   }
 
   .panels {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .connectorCol {
     width: 100%;
     height: 40px;
-    flex-shrink: 0;
   }
 
   .connectorSvg {

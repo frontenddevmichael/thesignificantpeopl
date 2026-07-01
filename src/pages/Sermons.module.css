@@ -63,6 +63,7 @@
 .section {
   padding: var(--space-10) var(--container-padding);
   background: var(--spc-cream-100);
+  touch-action: pan-y;
 }
 
 .inner {
@@ -348,7 +349,9 @@
     display: flex;
     gap: var(--space-4);
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    touch-action: pan-x;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
     padding-right: var(--container-padding);
     scrollbar-width: none;
