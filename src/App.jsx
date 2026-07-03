@@ -10,6 +10,7 @@ import Events from './pages/Events';
 import Give from './pages/Give';
 import Contact from './pages/Contact';
 import Live from './pages/Live';
+import Crusades from './pages/Crusades';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 import CookiePolicy from './pages/CookiePolicy';
@@ -33,6 +34,8 @@ export default function App() {
         <Route path="/give" element={<Give />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/live" element={<Live />} />
+        <Route path="/crusades" element={<Crusades />} />
+        <Route path="/crusades/:id" element={<Crusades />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />

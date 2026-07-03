@@ -35,6 +35,7 @@ export default function Header() {
           <NavLink to="/ministries" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`} onClick={close}>Ministries</NavLink>
           <NavLink to="/sermons" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`} onClick={close}>Sermons</NavLink>
           <NavLink to="/events" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`} onClick={close}>Events</NavLink>
+          <NavLink to="/crusades" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`} onClick={close}>Crusades</NavLink>
           <NavLink to="/live" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.navLinkActive : ''}`} onClick={close}>Live</NavLink>
           <NavLink to="/give" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.navLinkActive : ''} ${styles.giveLink}`} onClick={close}>Give</NavLink>
         </nav>
