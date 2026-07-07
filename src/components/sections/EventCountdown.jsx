@@ -3,7 +3,7 @@ import styles from './EventCountdown.module.css';
 
 const EVENT_DATES = [
   { name: 'Fire in the Word Conference', month: 4, day: 1 },
-  { name: 'Eagles of Destiny Congress', month: 7, day: 1 },
+  { name: 'Eagles of Destiny Congress', month: 8, day: 1 },
 ];
 
 function getNextEvent() {

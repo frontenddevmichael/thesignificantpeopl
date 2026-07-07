@@ -323,6 +323,62 @@
   background: var(--color-accent);
 }
 
+/* ── Locations ── */
+.locationsSection {
+  background: var(--spc-navy-900);
+}
+
+.locationsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.locationCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.locationCard:hover {
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.locationName {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: var(--fw-semibold);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.locationAddress {
+  font-family: var(--font-body);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-on-dark-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+
+.locationPhone {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.locationPhone:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 1023px) {
   .twoCol {
     grid-template-columns: 1fr;
@@ -344,6 +400,10 @@
 }
 
 @media (max-width: 767px) {
+  .locationsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .hero {
     padding: var(--space-7) var(--container-padding) var(--space-6);
   }
@@ -374,6 +434,10 @@
 }
 
 @media (max-width: 599px) {
+  .locationsGrid {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     padding: var(--space-5) var(--container-padding) var(--space-4);
   }

@@ -18,8 +18,8 @@ const raw = [
   },
   {
     id: 'ejigbo-2024',
-    name: 'Ejigbo Lagos — Wonders of Jesus Crusade',
-    altPrefix: 'Ejigbo Crusade 2024',
+    name: 'Ejigbo Lagos — The Wonders of Jesus Power Crusade',
+    altPrefix: 'Wonders of Jesus Power Crusade',
     folder: '/Photos/Ejigbo Lagos wonders of Jesus crusade may 2024',
     files: [
       "PHOTO-2026-07-02-13-22-06.jpg", "PHOTO-2026-07-02-13-22-07 2.jpg",

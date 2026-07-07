@@ -191,6 +191,23 @@ export default function About() {
       </section>
       <LeadershipProfile profiles={[leadership[0], leadership[1]]} />
 
+      <section className={`${styles.section} ${styles.locationsSection}`}>
+        <div className={styles.sectionInner}>
+          <SectionHeading eyebrow="Meeting Our Churches">Find a Location Near You</SectionHeading>
+          <div className={styles.locationsGrid}>
+            {churchInfo.branches.map((branch, i) => (
+              <ScrollReveal key={branch.name} delay={i * 100}>
+                <div className={styles.locationCard}>
+                  <span className={styles.locationName}>{branch.name}</span>
+                  <p className={styles.locationAddress}>{branch.address}</p>
+                  <a href={`tel:${branch.phone}`} className={styles.locationPhone}>{branch.phone}</a>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className={styles.section} style={{ background: 'var(--spc-cream-200)' }}>
         <div className={styles.sectionInner} style={{ maxWidth: 'var(--container-narrow)' }}>
           <SectionHeading eyebrow="FAQ">Frequently Asked Questions</SectionHeading>

@@ -23,12 +23,12 @@ export const churchInfo = {
     founders: 'Pastors Wisdom and Ebun Adeyemo',
     firstService: 'Megalo Building, Uffa Quarters, Igarra, Edo State',
     commissioningDetails: 'Officially commissioned by Bishop Felix Remi Adejumo at its worship centre beside Rockey Valley Hotel, Uttua Quarters, Igarra',
-    currentLocation: 'The City of Peace, Off Farm Road, Igarra, Edo State',
+    currentLocation: 'The City of Peace, Long Farm Road, Off Auchi-Ibillo Express Road, Igarra, Akoko-Edo, Edo State',
     initialMembers: 7,
     currentMembers: '500+',
     houseFellowships: 17,
     branches: 6,
-    story: 'It all started with a youth ministry — The Youth of Significance International Ministries. But God had bigger plans. As the vision grew, so did the name: The People of Significance Ministries International, a church for everyone, not just the young.\n\nThe Significant Peoples Church held its first service on 4th March 2007. Just seven people showed up — seven. They met at the Megalo Building, Uffa Quarters, Igarra, under the leadership of Pastors Wisdom and Ebun Adeyemo. A small start, but the fire was real.\n\nOn 12th April 2008, the ministry was officially commissioned by Bishop Felix Remi Adejumo at their worship centre beside Rockey Valley Hotel, Uttua Quarters, Igarra. God kept adding, kept growing. Before long, He gave them a permanent home — the City of Peace, Off Farm Road, Igarra, where we\'re still based today.\n\nFrom seven to over 500. From one location to seventeen house fellowships and six branches. God did it. And we\'re still just getting started — raising disciples, sending them out, impacting nations with the Gospel.',
+    story: 'It all started with a youth ministry — The Youth of Significance International Ministries. But God had bigger plans. As the vision grew, so did the name: The People of Significance Ministries International, a church for everyone, not just the young.\n\nThe Significant Peoples Church held its first service on 4th March 2007. Just seven people showed up — seven. They met at the Megalo Building, Uffa Quarters, Igarra, under the leadership of Pastors Wisdom and Ebun Adeyemo. A small start, but the fire was real.\n\nOn 12th April 2008, the ministry was officially commissioned by Bishop Felix Remi Adejumo at their worship centre beside Rockey Valley Hotel, Uttua Quarters, Igarra. God kept adding, kept growing. Before long, He gave them a permanent home — the City of Peace, Long Farm Road, Igarra, where we\'re still based today.\n\nFrom seven to over 500. From one location to seventeen house fellowships and six branches. God did it. And we\'re still just getting started — raising disciples, sending them out, impacting nations with the Gospel.',
   },
 
   services: [
@@ -37,11 +37,20 @@ export const churchInfo = {
     { day: 'Wednesday', time: '5:00 PM', label: 'Midweek Communion Service' },
   ],
 
+  branches: [
+    { name: 'Headquarters — Igarra', address: 'The City of Peace, Long Farm Road, Off Auchi-Ibillo Express Road, Igarra, Akoko-Edo, Edo State', phone: '08109053930' },
+    { name: 'Abuja 1', address: 'Best Solution International School, Gbessa-Sauka, Airport Road, Abuja', phone: '08143266204' },
+    { name: 'Abuja 2', address: 'At\'Sea Hall, Opposite AB Chiles, Iddo, Airport Road, Abuja', phone: '08060932383' },
+    { name: 'Enwan', address: 'Enwan, Akoko-Edo, Edo State', phone: '09162709287' },
+    { name: 'Auchi Poly', address: 'Auchi Polytechnic, Auchi, Edo State', phone: '09015948180' },
+    { name: 'Lagos', address: 'Yewa Road, Imokun Community, Eredo, Epe LGA, Lagos', phone: '07048821218' },
+  ],
+
   contact: {
-    address: 'The City of Peace, Off Farm Road, Igarra, Edo State',
-    phones: ['08032348235', '08062906510'],
+    address: 'The City of Peace, Long Farm Road, Off Auchi-Ibillo Express Road, Igarra, Akoko-Edo, Edo State',
+    phones: ['08032348235', '08062906510', '08109053930'],
     email: 'significantpeopleschurch01@gmail.com',
-    whatsapp: ['08032348235', '08062906510'],
+    whatsapp: ['08032348235', '08062906510', '08109053930'],
     officeHours: 'Monday to Friday',
   },
 
@@ -76,7 +85,7 @@ export const churchInfo = {
     heroHeading: 'Raising Significant People',
     heroSubheading: 'Disciples of all nations, raised for His glory.',
     ctaText: 'Join Us This Sunday | You Belong Here',
-    featuredAnnouncement: 'Sunday Services: 7:00am – 9:00am | 9:00am – 11:00am\nMidweek Communion Service: Wednesdays 5:00pm\nLocation: City of Peace, Off Farm Road, Igarra, Edo State',
+    featuredAnnouncement: 'Sunday Services: 7:00am – 9:00am | 9:00am – 11:00am\nMidweek Communion Service: Wednesdays 5:00pm\nLocation: City of Peace, Long Farm Road, Igarra, Edo State',
   },
 
   faq: [

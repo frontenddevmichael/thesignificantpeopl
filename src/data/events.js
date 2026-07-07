@@ -4,11 +4,12 @@ export const events = [
     name: 'The Eagles of Destiny Congress',
     month: 'August',
     day: 1,
-    description: 'A five-day prophetic gathering — a season of soaring to new heights in God. Three days of intense worship, word, and prayer.',
+    description: 'For 21 years, Eagles of Destiny Congress has remained committed to raising a generation of purpose-driven young people who will impact their generation for Christ. Through powerful worship, sound biblical teaching, fervent prayers, and practical life-transforming sessions, we equip young people spiritually, academically, professionally, and personally — empowering them to excel in every area of life.\n\nThis is a life-changing five-day residential camp experience offering a spiritually enriching and inspiring environment where destinies are shaped and lives are transformed. Feeding, accommodation, and transportation from different parts of Edo State are provided free of charge. Participants from various States across Nigeria join this gathering of young people united by a passion to know God, fulfill purpose, and become agents of positive change.',
     venue: 'Evang. Pelemo\'s Camp Ground, Ekpedo',
     duration: '5 days',
     scripture: 'Isaiah 40:31',
     tags: ['congress', 'annual'],
+    campIncludes: ['Feeding', 'Accommodation', 'Transportation (Edo State)'],
   },
   {
     id: 'fire-in-the-word',

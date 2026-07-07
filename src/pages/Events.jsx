@@ -48,9 +48,17 @@ export default function EventsPage() {
                   <h3 className={eStyles.title}>
                     {event.name}
                   </h3>
-                  <p className={eStyles.desc}>
-                    {event.description}
-                  </p>
+                  <div className={eStyles.desc}>
+                    {event.description.split('\n\n').map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                  </div>
+                  {event.campIncludes && (
+                    <div className={eStyles.includes}>
+                      <strong>Free: </strong>
+                      {event.campIncludes.join(' · ')}
+                    </div>
+                  )}
                   <div className={eStyles.meta}>
                     <span>{event.month} &middot; {event.duration}</span><br />
                     <span>{event.venue} &middot; {event.scripture}</span>
