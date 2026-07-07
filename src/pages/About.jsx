@@ -193,7 +193,7 @@ export default function About() {
 
       <section className={`${styles.section} ${styles.locationsSection}`}>
         <div className={styles.sectionInner}>
-          <SectionHeading eyebrow="Meeting Our Churches">Find a Location Near You</SectionHeading>
+          <SectionHeading eyebrow="Meeting Our Churches" dark>Find a Location Near You</SectionHeading>
           <div className={styles.locationsGrid}>
             {churchInfo.branches.map((branch, i) => (
               <ScrollReveal key={branch.name} delay={i * 100}>
