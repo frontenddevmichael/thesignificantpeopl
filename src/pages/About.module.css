@@ -362,9 +362,10 @@
 .locationAddress {
   font-family: var(--font-body);
   font-size: var(--fs-body-sm);
-  color: var(--color-text-on-dark-secondary);
+  color: var(--color-text-on-dark-primary);
   line-height: 1.6;
   margin-bottom: var(--space-3);
+  opacity: 0.8;
 }
 
 .locationPhone {
