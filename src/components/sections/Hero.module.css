@@ -19,6 +19,24 @@
   pointer-events: none;
 }
 
+.glow {
+  position: absolute;
+  width: 42vw;
+  max-width: 520px;
+  aspect-ratio: 1;
+  right: -8vw;
+  top: 18%;
+  background: radial-gradient(circle, rgba(201, 161, 59, 0.14) 0%, rgba(201, 161, 59, 0.05) 40%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: breathe 7s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
 .inner {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -61,6 +79,51 @@
   display: block;
 }
 
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateY(0.6em);
+  animation: lineReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.line:nth-child(1) { animation-delay: 0.2s; }
+.line:nth-child(2) { animation-delay: 0.34s; }
+.line:nth-child(3) { animation-delay: 0.48s; }
+
+@keyframes lineReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.annotation,
+.subhead,
+.ctas {
+  opacity: 0;
+  animation: riseIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.annotation { animation-delay: 0.12s; }
+.subhead { animation-delay: 0.62s; }
+.ctas { animation-delay: 0.76s; }
+
+.imgWrapper {
+  opacity: 0;
+  animation: riseIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .subhead {
   font-family: var(--font-body);
   font-size: var(--fs-body-lg);
@@ -94,6 +157,7 @@
     0 12px 48px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(201, 161, 59, 0.1);
   position: relative;
+  opacity: 0;
 }
 
 .heroImg {
@@ -142,6 +206,19 @@
 @keyframes float {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line,
+  .annotation,
+  .subhead,
+  .ctas,
+  .imgWrapper,
+  .glow {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
 }
 
 /* ── Tablet: single column, image below text ── */

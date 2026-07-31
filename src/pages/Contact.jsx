@@ -19,7 +19,7 @@ export default function Contact() {
         <meta property="og:title" content={`Contact — ${churchInfo.name}`} />
         <meta property="og:description" content={`Get in touch with ${churchInfo.name}. Find our location, service times, and contact information in Igarra, Edo State.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/contact" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/contact" />
       </Helmet>
 
       <section className={styles.hero}>

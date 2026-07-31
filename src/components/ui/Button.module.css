@@ -12,6 +12,30 @@
   line-height: 1;
   border-radius: var(--radius-sm);
   font-weight: var(--fw-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 25%, rgba(255, 255, 255, 0.4) 50%, transparent 75%);
+  transform: translateX(-220%) skewX(-15deg);
+  pointer-events: none;
+}
+
+.primary:hover::after,
+.primary:focus-visible::after,
+.outline:hover::after,
+.outline:focus-visible::after,
+.light:hover::after,
+.light:focus-visible::after {
+  animation: shimmer 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes shimmer {
+  to { transform: translateX(320%) skewX(-15deg); }
 }
 
 .outline {

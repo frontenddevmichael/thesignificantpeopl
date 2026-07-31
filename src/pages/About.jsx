@@ -55,7 +55,7 @@ export default function About() {
         <meta property="og:title" content={`About — ${churchInfo.name}`} />
         <meta property="og:description" content={`Learn about ${churchInfo.name}: our vision, mission, history, and leadership.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/about" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/about" />
       </Helmet>
 
       <section className={styles.hero}>

@@ -8,6 +8,10 @@
   <url><loc>https://thesignificantpeopleschurch.org/give</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://thesignificantpeopleschurch.org/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://thesignificantpeopleschurch.org/crusades</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/crusades/benin-2023</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/crusades/ejigbo-2024</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/crusades/fuel-outreach-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://thesignificantpeopleschurch.org/events/eagles-of-destiny/gallery</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://thesignificantpeopleschurch.org/live</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://thesignificantpeopleschurch.org/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://thesignificantpeopleschurch.org/terms-of-use</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

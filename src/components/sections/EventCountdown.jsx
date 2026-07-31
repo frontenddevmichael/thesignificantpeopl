@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from './EventCountdown.module.css';
 
 const EVENT_DATES = [
@@ -29,39 +29,80 @@ function calcDelta(target) {
   };
 }
 
+function FlipUnit({ value, label }) {
+  const prevRef = useRef(value);
+  const [tick, setTick] = useState(null);
+
+  useEffect(() => {
+    if (value === prevRef.current) return;
+    setTick({ from: prevRef.current, to: value });
+    prevRef.current = value;
+  }, [value]);
+
+  const text = String(value).padStart(2, '0');
+
+  return (
+    <div className={styles.unit}>
+      <div className={styles.card} aria-hidden="true">
+        {tick ? (
+          <>
+            <span className={`${styles.digit} ${styles.digitOut}`}>
+              {String(tick.from).padStart(2, '0')}
+            </span>
+            <span
+              className={`${styles.digit} ${styles.digitIn}`}
+              onAnimationEnd={() => setTick(null)}
+            >
+              {String(tick.to).padStart(2, '0')}
+            </span>
+          </>
+        ) : (
+          <span className={styles.digit}>{text}</span>
+        )}
+      </div>
+      <span className={styles.label}>{label}</span>
+    </div>
+  );
+}
+
 export default function EventCountdown() {
   const next = getNextEvent();
   const [delta, setDelta] = useState(() => calcDelta(next.date));
+  const [srText, setSrText] = useState(() =>
+    `Countdown to ${next.name}: ${delta.days} days, ${delta.hours} hours, ${delta.minutes} minutes, ${delta.seconds} seconds`
+  );
 
   useEffect(() => {
     const timer = setInterval(() => setDelta(calcDelta(next.date)), 1000);
     return () => clearInterval(timer);
   }, [next.date]);
 
+  useEffect(() => {
+    const refreshSr = () => {
+      const d = calcDelta(next.date);
+      setSrText(
+        `Countdown to ${next.name}: ${d.days} days, ${d.hours} hours, ${d.minutes} minutes, ${d.seconds} seconds`
+      );
+    };
+    const timer = setInterval(refreshSr, 30000);
+    return () => clearInterval(timer);
+  }, [next.name, next.date]);
+
   return (
     <div className={styles.wrapper}>
       <h3 className={styles.title}>{next.name}</h3>
-      <div className={styles.units}>
-        <div className={styles.unit}>
-          <span className={styles.value}>{String(delta.days).padStart(2, '0')}</span>
-          <span className={styles.label}>Days</span>
-        </div>
+      <div className={styles.units} aria-hidden="true">
+        <FlipUnit value={delta.days} label="Days" />
         <span className={styles.separator}>:</span>
-        <div className={styles.unit}>
-          <span className={styles.value}>{String(delta.hours).padStart(2, '0')}</span>
-          <span className={styles.label}>Hours</span>
-        </div>
+        <FlipUnit value={delta.hours} label="Hours" />
         <span className={styles.separator}>:</span>
-        <div className={styles.unit}>
-          <span className={styles.value}>{String(delta.minutes).padStart(2, '0')}</span>
-          <span className={styles.label}>Min</span>
-        </div>
+        <FlipUnit value={delta.minutes} label="Min" />
         <span className={styles.separator}>:</span>
-        <div className={styles.unit}>
-          <span className={styles.value}>{String(delta.seconds).padStart(2, '0')}</span>
-          <span className={styles.label}>Sec</span>
-        </div>
+        <FlipUnit value={delta.seconds} label="Sec" />
       </div>
+      <p className={styles.srOnly} aria-live="polite">
+        {srText}
+      </p>
     </div>
   );
 }

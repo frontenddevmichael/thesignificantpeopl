@@ -47,7 +47,7 @@ export default function Sermons() {
         <meta property="og:title" content={`Sermons — ${churchInfo.name}`} />
         <meta property="og:description" content={`Listen to audio messages from ${churchInfo.name} on Telegram. Teaching that transforms lives.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/sermons" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/sermons" />
       </Helmet>
 
       {/* Hero */}

@@ -38,7 +38,7 @@ export default function MinistriesPage() {
         <meta property="og:title" content={`Ministries — ${churchInfo.name}`} />
         <meta property="og:description" content={`Explore the ministries of ${churchInfo.name}: Youth, Children's Church, Worship, Drama, Prayer, Media, and more.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/ministries" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/ministries" />
       </Helmet>
 
       <section className={styles.hero}>

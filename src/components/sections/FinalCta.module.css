@@ -73,7 +73,7 @@
 .subtext {
   font-family: var(--font-body);
   font-size: var(--fs-body-md);
-  color: rgba(237, 230, 211, 0.6);
+  color: rgba(237, 230, 211, 0.78);
   line-height: var(--lh-body);
   max-width: 42ch;
   margin-top: var(--space-5);

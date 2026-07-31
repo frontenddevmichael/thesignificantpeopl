@@ -26,7 +26,7 @@ export default function CrusadesPage() {
         <meta property="og:title" content={`Crusades — ${churchInfo.name}`} />
         <meta property="og:description" content={`Crusades and outreaches organised by ${churchInfo.name}.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/crusades" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/crusades" />
       </Helmet>
 
       <section className={aboutStyles.hero}>

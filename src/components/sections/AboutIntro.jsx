@@ -31,6 +31,8 @@ export default function AboutIntro() {
                   alt="The Significant Peoples Church congregation"
                   className={styles.aboutImg}
                   loading="lazy"
+                  width="1023"
+                  height="1280"
                   onError={(e) => { e.target.style.display = 'none'; e.target.nextElementSibling?.style.setProperty('display', 'flex'); }}
                 />
                 <div className={styles.imgFallback} aria-hidden="true">

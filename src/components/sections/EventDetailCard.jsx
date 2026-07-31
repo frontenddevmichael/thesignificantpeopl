@@ -20,7 +20,14 @@ export default function EventDetailCard({ events }) {
                   <span>{event.venue}</span>
                   <span>{event.scripture}</span>
                 </div>
-                <Button to="/events">View Details</Button>
+                <div className={styles.cardActions}>
+                  <Button to="/events">View Details</Button>
+                  {event.id === 'eagles-of-destiny' && (
+                    <Button to="/events/eagles-of-destiny/gallery" variant="primary">
+                      View Event Gallery
+                    </Button>
+                  )}
+                </div>
                 <div className={styles.detailCallout} aria-hidden="true">&#x2197;</div>
               </div>
             </ScrollReveal>

@@ -14,7 +14,7 @@ export default function Give() {
         <meta property="og:title" content={`Give — ${churchInfo.name}`} />
         <meta property="og:description" content={`Support the ministry of ${churchInfo.name} through tithes, offerings, and donations.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/give" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/give" />
       </Helmet>
 
       <section className={styles.hero}>

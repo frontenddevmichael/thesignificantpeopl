@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
         <meta property="og:title" content={`Privacy Policy — ${churchInfo.name}`} />
         <meta property="og:description" content={`Privacy Policy for ${churchInfo.name}. Learn how we collect, use, and protect your personal information.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/privacy-policy" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/privacy-policy" />
       </Helmet>
       <section className={styles.hero}>
         <div className={styles.heroInner}>

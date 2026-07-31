@@ -9,9 +9,9 @@ export default function Hero() {
         <div className={styles.headlineCol}>
           <span className={styles.annotation}>The Significant Peoples Church &mdash; Est. 2007</span>
           <h1 className={styles.headline}>
-            Raising<br />
-            <span className={styles.headlineAccent}>Significant</span><br />
-            People
+            <span className={styles.line}>Raising</span>
+            <span className={`${styles.line} ${styles.headlineAccent}`}>Significant</span>
+            <span className={styles.line}>People</span>
           </h1>
           <p className={styles.subhead}>
             {churchInfo.homepage.heroSubheading}
@@ -28,6 +28,9 @@ export default function Hero() {
               alt="The Significant Peoples Church"
               className={styles.heroImg}
               loading="eager"
+              fetchPriority="high"
+              width="896"
+              height="1152"
               onError={(e) => { e.target.style.display = 'none'; e.target.nextElementSibling?.style.setProperty('display', 'flex'); }}
             />
             <div className={styles.imgFallback} aria-hidden="true">
@@ -36,6 +39,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <div className={styles.glow} aria-hidden="true" />
       <div className={styles.scrollIndicator}>
         <span className={styles.scrollText}>Scroll</span>
         <span className={styles.scrollLine} />

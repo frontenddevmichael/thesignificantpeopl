@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './CrusadeGallery.module.css';
 
 export default function CrusadeGallery({ crusade, onBack }) {
-  const { name, images } = crusade;
+  const { images } = crusade;
   const len = images.length;
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);

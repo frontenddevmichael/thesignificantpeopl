@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import SectionHeading from '../components/ui/SectionHeading';
 import EventCountdown from '../components/sections/EventCountdown';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import Button from '../components/ui/Button';
 import { events } from '../data/events';
 import { churchInfo } from '../data/churchInfo';
 import styles from './About.module.css';
@@ -16,7 +17,7 @@ export default function EventsPage() {
         <meta property="og:title" content={`Events — ${churchInfo.name}`} />
         <meta property="og:description" content={`Upcoming events at ${churchInfo.name}: The Eagles of Destiny Congress and Fire in the Word Conference.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/events" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/events" />
       </Helmet>
 
       <section className={styles.hero}>
@@ -63,6 +64,13 @@ export default function EventsPage() {
                     <span>{event.month} &middot; {event.duration}</span><br />
                     <span>{event.venue} &middot; {event.scripture}</span>
                   </div>
+                  {event.id === 'eagles-of-destiny' && (
+                    <div style={{ marginTop: 'var(--space-4)' }}>
+                      <Button to="/events/eagles-of-destiny/gallery" variant="primary">
+                        View Event Gallery
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </ScrollReveal>
             ))}

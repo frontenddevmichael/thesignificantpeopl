@@ -1,5 +1,58 @@
+import { useEffect, useRef, useState } from 'react';
 import ScrollReveal from '../ui/ScrollReveal';
 import styles from './MeasuredStats.module.css';
+
+const prefersReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function parseValue(raw) {
+  const match = String(raw).match(/^(\d+)(.*)$/);
+  return match ? { number: Number(match[1]), suffix: match[2] } : { number: 0, suffix: String(raw) };
+}
+
+function useCountUp(target) {
+  const ref = useRef(null);
+  const [display, setDisplay] = useState(prefersReduced ? target : 0);
+
+  useEffect(() => {
+    if (prefersReduced) return;
+    const el = ref.current;
+    if (!el) return;
+    let raf;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        const start = performance.now();
+        const duration = 1600;
+        const tick = (now) => {
+          const t = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - t, 4);
+          setDisplay(Math.round(target * eased));
+          if (t < 1) raf = requestAnimationFrame(tick);
+        };
+        raf = requestAnimationFrame(tick);
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [target]);
+
+  return [ref, display];
+}
+
+function StatValue({ raw }) {
+  const { number, suffix } = parseValue(raw);
+  const [ref, display] = useCountUp(number);
+  return (
+    <span ref={ref} className={styles.value}>
+      {display}{suffix}
+    </span>
+  );
+}
 
 const stats = [
   {
@@ -62,7 +115,7 @@ export default function MeasuredStats() {
                 <div className={styles.iconWrap}>
                   {s.icon}
                 </div>
-                <span className={styles.value}>{s.value}</span>
+                <StatValue raw={s.value} />
                 <span className={styles.label}>{s.label}</span>
                 <div className={styles.cardLine} />
               </div>

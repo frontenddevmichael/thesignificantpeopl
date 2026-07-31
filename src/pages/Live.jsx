@@ -11,7 +11,7 @@ export default function Live() {
         <meta property="og:title" content={`Live Stream — ${churchInfo.name}`} />
         <meta property="og:description" content={`Watch live services from ${churchInfo.name}. Join us for worship, teaching, and fellowship online.`} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/live" />
+        <meta property="og:url" content="https://thesignificantpeopleschurch.org/live" />
       </Helmet>
       <section className={styles.hero}>
         <div className={styles.heroInner}>

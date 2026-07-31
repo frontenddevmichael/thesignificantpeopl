@@ -6,10 +6,12 @@ const prefersReduced = typeof window !== 'undefined' && window.matchMedia('(pref
 export default function Gallery({ images = [] }) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [lightbox, setLightbox] = useState(false);
   const len = images.length;
   const lastInteraction = useRef(0);
   const stripRef = useRef(null);
   const thumbRefs = useRef({});
+  const lightboxRef = useRef(null);
 
   const goTo = useCallback((i) => {
     if (i < 0 || i >= len) return;
@@ -26,6 +28,51 @@ export default function Gallery({ images = [] }) {
     lastInteraction.current = Date.now();
     setActive((prev) => (prev - 1 + len) % len);
   }, [len]);
+
+  const openLightbox = useCallback((i) => {
+    goTo(i);
+    setLightbox(true);
+  }, [goTo]);
+
+  const closeLightbox = useCallback(() => setLightbox(false), []);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') setLightbox(false);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [lightbox]);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prevOverflow; };
+  }, [lightbox]);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const el = lightboxRef.current;
+    if (!el) return;
+    const focusables = el.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    first?.focus();
+    const onTab = (e) => {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last?.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first?.focus();
+      }
+    };
+    document.addEventListener('keydown', onTab);
+    return () => document.removeEventListener('keydown', onTab);
+  }, [lightbox]);
 
   useEffect(() => {
     const thumb = thumbRefs.current[active];
@@ -50,14 +97,14 @@ export default function Gallery({ images = [] }) {
   }, [len, prev, next]);
 
   useEffect(() => {
-    if (len < 2 || prefersReduced || paused) return;
+    if (len < 2 || prefersReduced || paused || lightbox) return;
     const timer = setInterval(() => {
       if (Date.now() - lastInteraction.current >= 4000) {
         setActive((prev) => (prev + 1) % len);
       }
     }, 5000);
     return () => clearInterval(timer);
-  }, [len, paused]);
+  }, [len, paused, lightbox]);
 
   if (!len) return null;
 
@@ -78,6 +125,14 @@ export default function Gallery({ images = [] }) {
               loading={i === 0 ? 'eager' : 'lazy'}
               onError={(e) => { e.target.style.display = 'none'; }}
             />
+            <button
+              type="button"
+              className={styles.zoomBtn}
+              onClick={() => openLightbox(i)}
+              aria-label={img.alt ? `Enlarge: ${img.alt}` : `Enlarge photo ${i + 1}`}
+            >
+              <svg viewBox="0 0 24 24" fill="none" width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M16.5 16.5 21 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M8 11h6M11 8v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+            </button>
             <div className={styles.overlay} />
           </div>
         ))}
@@ -117,6 +172,26 @@ export default function Gallery({ images = [] }) {
           </div>
         )}
       </div>
+
+      {lightbox && (
+        <div
+          ref={lightboxRef}
+          className={styles.lightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label={images[active]?.alt || 'Photo viewer'}
+        >
+          <button type="button" className={styles.lbClose} onClick={closeLightbox} aria-label="Close photo viewer">&times;</button>
+          <button type="button" className={styles.lbNav} onClick={prev} aria-label="Previous photo">&larr;</button>
+          <figure className={styles.lbFigure}>
+            <img src={images[active]?.src} alt={images[active]?.alt || 'Gallery image'} className={styles.lbImage} />
+            <figcaption className={styles.lbCaption}>
+              {images[active]?.alt || `Photo ${active + 1} of ${len}`}
+            </figcaption>
+          </figure>
+          <button type="button" className={styles.lbNav} onClick={next} aria-label="Next photo">&rarr;</button>
+        </div>
+      )}
     </section>
   );
 }

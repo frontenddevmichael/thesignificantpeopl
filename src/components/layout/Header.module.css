@@ -12,6 +12,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: padding var(--duration-base) var(--ease-default), box-shadow var(--duration-base) var(--ease-default);
+}
+
+.headerScrolled {
+  padding: 8px var(--container-padding);
+  box-shadow: 0 8px 32px rgba(10, 15, 31, 0.35);
+}
+
+.progressBar {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+  transform-origin: left;
+  transition: width 0.1s linear;
+  pointer-events: none;
 }
 
 .brand {
@@ -68,7 +85,7 @@
 .navLink {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: rgba(237, 230, 211, 0.6);
+  color: rgba(237, 230, 211, 0.78);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color var(--duration-fast) var(--ease-default);
