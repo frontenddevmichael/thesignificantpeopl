@@ -7,6 +7,7 @@ import MissionMosaic from '../components/sections/MissionMosaic';
 import MinistryFloorPlan from '../components/sections/MinistryFloorPlan';
 import LeadershipProfile from '../components/sections/LeadershipProfile';
 import EventDetailCard from '../components/sections/EventDetailCard';
+import CongressHighlight from '../components/sections/CongressHighlight';
 import Gallery from '../components/sections/Gallery';
 import TestimonialCarousel from '../components/sections/TestimonialCarousel';
 import FinalCta from '../components/sections/FinalCta';
@@ -75,6 +76,7 @@ export default function Home() {
       <MinistryFloorPlan ministries={ministries} />
       <LeadershipProfile profiles={[leadership[0], leadership[1]]} />
       <EventDetailCard events={events} />
+      <CongressHighlight />
       <Gallery images={galleryImages} />
       <TestimonialCarousel testimonials={testimonials} />
       <FinalCta />
